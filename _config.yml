@@ -1,0 +1,83 @@
+# Hexo Theme configuration file
+
+# Font
+font:
+  stylesheets:
+    - ## "path/to/file" or URL (the domain of URL should be on the white list of AMP Project)
+  site_title: ## font-family
+  site_subtitle: ## font-family
+  body: ## font-family
+
+# Background
+background:
+  color:
+  img: img/background.jpg
+  opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
+
+# Banner
+banner:
+  color:
+  img: img/banner.jpg
+  opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
+
+# Global navigation
+nav:
+  - type: home ## home / archive / category / tag / other
+  - type: custom ## home / archive / category / tag / custom
+    title: About
+    path: about/
+    icon: fa-user
+  - type: archive ## home / archive / category / tag / other
+
+# Sidebar
+sidebar:
+  position: right ## right/left/bottom/top/none
+  widgets:
+    - intro
+    - search
+    - recent_posts
+    - archive
+    - tagcloud
+    - tag
+    - category
+    - links
+    - notice
+  show_count:
+    archive: true
+    tagcloud: true
+    tag: true
+    category: true
+
+# Intro widgit
+intro:
+  photo: img/self-photo.png ## "path/to/file" or URL
+  description: |
+    A user of [Hexo](https://hexo.io).
+    If you like this Hexo theme "Wakaba", please STAR [its GitHub repository](https://github.com/seaoak/hexo-theme-wakaba).
+  email_img: img/not-easily-guessable-name.png ## "path/to/file" or URL
+  links:
+    - title: Homepage
+      url: https://www.example.com
+    - title: Contact me
+      url: https://example.com/contact
+
+# Links widget
+links:
+ - title: Hexo
+   url: https://hexo.io
+ - title: Hexo Themes
+   url: https://hexo.io/themes
+ - title: Wakaba - Hexo Theme
+   url: https://github.com/seaoak/hexo-theme-wakaba
+
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# Miscellaneous
+google_analytics:
