@@ -11,13 +11,17 @@ font:
 # Background
 background:
   color:
-  img: img/background.jpg
+  img_small: img/background.jpg
+  img_middle: img/background.jpg
+  img_large: img/background.jpg
   opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
 
 # Banner
 banner:
   color:
-  img: img/banner.jpg
+  img_small: img/background.jpg
+  img_middle: img/background.jpg
+  img_large: img/background.jpg
   opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
 
 # Global navigation
