@@ -33,6 +33,11 @@ nav:
     icon: fa-user
   - type: archive ## home / archive / category / tag / custom
 
+# Site search
+search:
+  url_template: https://search.example.com/?domain=`domain`&path=`root`&keywords=`text`
+  enable_search_box: true
+
 # Sidebar
 sidebar:
   position: right ## right/left/bottom/top/none
