@@ -26,12 +26,12 @@ banner:
 
 # Global navigation
 nav:
-  - type: home ## home / archive / category / tag / other
+  - type: home ## home / archive / category / tag / custom
   - type: custom ## home / archive / category / tag / custom
     title: About
     path: about/
     icon: fa-user
-  - type: archive ## home / archive / category / tag / other
+  - type: archive ## home / archive / category / tag / custom
 
 # Sidebar
 sidebar:
