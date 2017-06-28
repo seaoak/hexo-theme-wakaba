@@ -79,6 +79,12 @@ links:
  - title: Wakaba - Hexo Theme
    url: https://github.com/seaoak/hexo-theme-wakaba
 
+# Notice widget
+notice:
+  body: |
+    Except as otherwise noted, the content of this page is licensed under [the Creative Commons Attribution 4.0 License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode), and code samples are licensed under the MIT License (the X11 License).
+    Copyright (C) 2017 [Seaoak](https://seaoak.jp)
+
 # Feed
 feed:
   type: atom
