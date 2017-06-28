@@ -1,23 +1,26 @@
 archives: Archives
-archives_with: Archives: %s
+archives_with: "Archives: %s"
 categories: Categories
 category: Category
 comment: Comments
 excerpt_link: Read More
 home: Home
-monthly_format: MMM, YYYY
+intro: Introduction
+links: Links
+monthly_format: "%s, %s"
 newer: Newer
 next: Next
+notice: Notice
 older: Older
-page: Page %d
-powered_by: Powered by
+page: "Page %d"
+powered_by: "Powered by %s"
 prev: Prev
 recent_posts: Recent Posts
-rss_feed: RSS Feed
+rss_feed: RSS
 search: Search
 share: Share
 tagcloud: Tag Cloud
 tags: Tags
 tag: Tag
 tweets: Tweets
-yearly_format: YYYY
+yearly_format: "%s"

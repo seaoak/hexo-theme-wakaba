@@ -1,0 +1,29 @@
+<%-
+  partial('_partial/html-head', {
+    lang: config.language,
+    title: config.title,
+    canonical: "./",
+    stylesheets: theme.font.stylesheets,
+    cssfile: "_css/styles.css"
+  })
+%>
+<body class="hexo hexo-amp hexo-index">
+  <header>
+    <h1><a href="./"><%= config.title %></a></h1>
+    <h2><%= config.subtitle %></h2>
+  </header>
+  <main>
+    <p>This is a body.</p>
+  </main>
+  <nav>
+    <ol>
+      <li><a href="<%- url_for('/') %>"><%= _p('home') %></a></li>
+      <li><a href="<%- url_for(config.archive_dir) %>"><%= _p('archives') %></a></li>
+    </ol>
+  </nav>
+  <aside>
+  </aside>
+  <footer>
+    <p>Copyright (C) 2017, <%= config.author %></p>
+  </footer>
+</body></html>
