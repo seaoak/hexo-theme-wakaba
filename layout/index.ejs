@@ -13,7 +13,20 @@
     <h2><%= config.subtitle %></h2>
   </header>
   <main>
+    <% if (is_home()) { %>
+    <ol>
+    <%   page.posts.forEach(post => { %>
+      <li>
+        <h2><%= post.title %></h2>
+        <div>
+          <%- post.description || post.excerpt || post.content %>
+        </div>
+      </li>
+    <%   }); %>
+    </ol>
+    <% } else { %>
     <p>This is a body.</p>
+    <% } %>
   </main>
   <nav>
     <ol>
