@@ -49,6 +49,10 @@
     </ol>
   </nav>
   <aside>
+    <% theme.sidebar.widgets.forEach(name => { %>
+    <%   if (! name) return; %>
+    <%-  partial('_widget/' + '000', {title: _p(name)}, {only: true}) %>
+    <% }); %>
   </aside>
   <footer>
     <p>Copyright (C) 2017, <%= config.author %></p>
