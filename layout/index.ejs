@@ -17,8 +17,35 @@
   </main>
   <nav>
     <ol>
-      <li><a href="<%- url_for('/') %>"><%= _p('home') %></a></li>
-      <li><a href="<%- url_for(config.archive_dir) %>"><%= _p('archives') %></a></li>
+      <% theme.nav.forEach(item => { %>
+      <%   if (! item) return; %>
+      <%   if (item.type === 'home') { %>
+      <li><a href="<%- url_for('/') %>" class="fa-home"><%= _p('home') %></a></li>
+      <%     return;
+           }
+      %>
+      <%   if (item.type === 'archive') { %>
+      <li><a href="<%- url_for(config.archive_dir + '/') %>" class="fa-fei"><%= _p('archives') %></a></li>
+      <%     return;
+           }
+      %>
+      <%   if (item.type === 'category') { %>
+      <li><a href="<%- url_for(config.category_dir + '/') %>" class="fa-gui"><%= _p('categories') %></a></li>
+      <%     return;
+           }
+      %>
+      <%   if (item.type === 'tag') { %>
+      <li><a href="<%- url_for(config.tag_dir + '/') %>" class="fa-biao"><%= _p('tags') %></a></li>
+      <%     return;
+           }
+      %>
+      <%   if (item.type === 'custom') { %>
+      <li><a href="<%- url_for(item.path + '/') %>" class="<%- item.icon %>"><%= item.title %></a></li>
+      <%     return;
+           }
+      %>
+      <%   throw new Error('unknown type of theme.nav: ' + item.type); %>
+      <% }); %>
     </ol>
   </nav>
   <aside>
