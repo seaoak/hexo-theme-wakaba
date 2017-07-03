@@ -23,20 +23,13 @@
         </header>
         <% if (post.description) { %>
         <div class="description"><%- post.description %></div>
-        <%   return;
-           }
-        %>
+        <% } %>
         <% if (post.excerpt) { %>
         <div class="excerpt"><%- post.excerpt %></div>
-        <%   return;
-           }
-        %>
+        <% } %>
         <% if (post.content) { %>
         <div class="content"><%- post.content %></div>
-        <%   return;
-           }
-        %>
-        <div class="unknown"><p>UNEXPECTED !!</p></div>
+        <% } %>
       </article>
     <%   }); %>
     </div>
