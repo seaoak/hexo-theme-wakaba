@@ -14,9 +14,9 @@
   </header>
   <main>
     <% if (is_home()) { %>
-    <ol>
+    <div>
     <%   page.posts.forEach(post => { %>
-      <li>
+      <article>
         <h2><%= post.title %></h2>
         <% if (post.description) { %>
         <div class="description"><%- post.description %></div>
@@ -34,9 +34,9 @@
            }
         %>
         <div class="unknown"><p>UNEXPECTED !!</p></div>
-      </li>
+      </article>
     <%   }); %>
-    </ol>
+    </div>
     <% } else { %>
     <p>This is a body.</p>
     <% } %>
