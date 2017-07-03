@@ -18,9 +18,22 @@
     <%   page.posts.forEach(post => { %>
       <li>
         <h2><%= post.title %></h2>
-        <div>
-          <%- post.description || post.excerpt || post.content %>
-        </div>
+        <% if (post.description) { %>
+        <div class="description"><%- post.description %></div>
+        <%   return;
+           }
+        %>
+        <% if (post.excerpt) { %>
+        <div class="excerpt"><%- post.excerpt %></div>
+        <%   return;
+           }
+        %>
+        <% if (post.content) { %>
+        <div class="content"><%- post.content %></div>
+        <%   return;
+           }
+        %>
+        <div class="unknown"><p>UNEXPECTED !!</p></div>
       </li>
     <%   }); %>
     </ol>
