@@ -26,12 +26,15 @@ banner:
 
 # Global navigation
 nav:
-  - type: home ## home / archive / category / tag / custom
-  - type: custom ## home / archive / category / tag / custom
-    title: About
-    path: about/
+  - title: Home
+    path: /
+    icon: fa-home
+  - title: About
+    path: /about/
     icon: fa-user
-  - type: archive ## home / archive / category / tag / custom
+  - title: Archive
+    path: /archives/
+    icon: fa-fei
 
 # Site search
 search:

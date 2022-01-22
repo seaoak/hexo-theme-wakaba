@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{config.language}}">
+<head>
+    <meta charset="utf-8">
+    <title>{{config.title}}</title>
+    <!--
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    -->
+
+    {{#each theme.font.stylesheets}}
+    {{#if this}}
+    <link rel="stylesheet" href="{{this}}" />
+    {{/if}}
+    {{/each}}
+
+</head>
+<body class="hexo hexo-index">
+  <header id="global_header">
+    <h1><a href="./">{{config.title}}</a></h1>
+    <p>{{config.subtitle}}</p>
+  </header>
+  <main>
+    <div>
+      {{#each page.posts}}
+      {{#each this}}
+      {{log this.tags.length}}
+      <article>
+        <header>
+          <h1>{{this.title}}</h1>
+          <div>
+            <span class="post_date">{{this.date}}</span>
+            {{#if this.updated}}
+            <span class="post_updated">(updated: {{this.updated}})</span>
+            {{/if}}
+          </div>
+          {{#if this.description}}
+          <p class="post_description">{{this.description}}</p>
+          {{/if}}
+        </header>
+        {{#if this.content}}
+        <div class="post_content">{{{this.content}}}</div>
+        {{/if}}
+        <footer>
+          {{#if this.categories}}
+          <ul class="post_categories">
+            {{#each this.categories}}
+            <li>Category: {{this}}</li>  
+            {{/each}}
+          </ul>
+          {{/if}}
+          {{!--
+          {{#if this.tags}}
+          <ul class="post_tags">
+            {{#each this.tags}}
+            <li>Tag: {{this}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+          --}}
+        </footer>
+      </article>
+      {{/each}}
+      {{/each}}
+    </div>
+  </main>
+  <nav id="global_nav">
+    <ul>
+      {{#each theme.nav}}
+      {{#if this}}
+      <li class="{{this.icon}}"><a href="{{this.url}}">{{this.title}}</a></li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </nav>
+  <aside id="sidebar">
+    {{#each theme.sidebar.widgets}}
+    {{#if this}}
+    <section>
+      <h5>{{this}}</h5>
+      <p>Not implemented yet.</p>
+    </section>
+    {{/if}}
+    {{/each}}
+  </aside>
+  <footer id="global_footer">
+    <p class="copyright">Copyright (C) 2017, {{config.author}}</p>
+  </footer>
+</body></html>
