@@ -3,7 +3,7 @@
 # Font
 font:
   stylesheets:
-    - ## "path/to/file" or URL (the domain of URL should be on the white list of AMP Project)
+    - ## "path/to/file" or URL
   site_title: ## font-family
   site_subtitle: ## font-family
   body: ## font-family
