@@ -2,7 +2,7 @@
   "name": "hexo-theme-wakaba",
   "version": "0.0.1",
   "private": true,
-  "description": "A theme of Hexo (modern / responsive / semantic/ valid / AMP / WAI-ARIA / CSS3 / HTML5.1)",
+  "description": "A theme of Hexo (modern / responsive / semantic / lightweight)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seaoak/hexo-theme-wakaba.git"

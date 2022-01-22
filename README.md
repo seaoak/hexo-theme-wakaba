@@ -8,10 +8,10 @@ The features are:
 - responsive
 - semantic
 - valid
-- [AMP (Accelerated Mobile Pages)](https://www.ampproject.org)
+- lightweight
 - [WAI-ARIA (Accessibility)](https://www.w3.org/TR/using-aria/)
 - CSS3 (FlexBox, Responsive Image, etc)
-- HTML5.1
+- HTML5.2
 
 "Wakaba" is designed for tech blogs, such as that mainly have texts and code blocks, not for photo galleries.
 
@@ -22,8 +22,6 @@ The features are:
 
 ## Dependencies
 
-- JavaScript library of AMP Project   
-  https://www.ampproject.org
 - Google Fonts   
   https://fonts.google.com
 - Icon fonts of Font Awesome CDN   
