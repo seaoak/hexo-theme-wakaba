@@ -1,12 +1,16 @@
-<%-
-  partial('_partial/html-head', {
-    lang: config.language,
-    title: config.title,
-    canonical: "./",
-    stylesheets: theme.font.stylesheets,
-    cssfile: "_css/styles.css"
-  })
-%>
+<!doctype html>
+<html lang="<%= config.language %>">
+<head>
+    <meta charset="utf-8">
+    <title><%= config.title %></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <% theme.font.stylesheets.forEach(function(url) { -%>
+    <%   if (! url) return; -%>
+    <link rel="stylesheet" href="<%- url %>" />
+    <% }); -%>
+
+</head>
 <body class="hexo hexo-index">
   <header>
     <h1><a href="./"><%= config.title %></a></h1>
