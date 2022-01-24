@@ -16,6 +16,7 @@
 
 </head>
 <body class="hexo hexo-index">
+  <div id="container">
   <header id="global_header">
     <h1><a href="./">{{config.title}}</a></h1>
     <p>{{config.subtitle}}</p>
@@ -64,15 +65,6 @@
       {{/each}}
     </div>
   </main>
-  <nav id="global_nav">
-    <ul>
-      {{#each theme.nav}}
-      {{#if this}}
-      <li class="{{this.icon}}"><a href="{{this.url}}">{{this.title}}</a></li>
-      {{/if}}
-      {{/each}}
-    </ul>
-  </nav>
   <aside id="sidebar">
     {{#each theme.sidebar.widgets}}
     {{#if this}}
@@ -83,6 +75,16 @@
     {{/if}}
     {{/each}}
   </aside>
+  </div><!-- id="container" -->
+  <nav id="global_nav">
+    <ul>
+      {{#each theme.nav}}
+      {{#if this}}
+      <li class="{{this.icon}}"><a href="{{this.url}}">{{this.title}}</a></li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </nav>
   <footer id="global_footer">
     <p class="copyright">Copyright (C) 2017, {{config.author}}</p>
   </footer>

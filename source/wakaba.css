@@ -10,6 +10,55 @@
     border: 0;
 }
 
+/***************************************************************************/
+/* 2 column design (automatically fallback to 1 column for mobile devices) */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80rem;
+}
+
+#container > header {
+    flex-basis: 100%;
+    flex-grow: 1;
+    height: 20ex;
+    background-color: #f0f0ff;
+}
+
+#container > main {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50rem;
+    background-color: #f0ffff;
+}
+
+#container > aside {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    background-color: #f0fff0;
+}
+
+body > nav {
+    order: -1;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff0f0;
+}
+
+body > footer {
+    width: 100%;
+    background-color: #cccccc;
+}
+
+/***************************************************************************/
+/* each elements */
 a {
     color: Blue;
 }
@@ -17,4 +66,8 @@ a {
 a:hover, a:active {
     color: Red;
     text-decoration: underline;
+}
+
+figure {
+    overflow-x: scroll;
 }
