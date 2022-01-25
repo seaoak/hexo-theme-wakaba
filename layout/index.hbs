@@ -23,9 +23,7 @@
   </header>
   <main>
     <div>
-      {{#each page.posts}}
-      {{#each this}}
-      {{log this.tags.length}}
+      {{#*inline "article"}}
       <article>
         <header>
           <h1><a href="/{{this.path}}">{{this.title}}</a></h1>
@@ -67,6 +65,11 @@
           --}}
         </footer>
       </article>
+      {{/inline}}
+      {{#each page.posts}}
+      {{#each this}}
+      {{log this.tags.length}}
+      {{> article}}
       {{/each}}
       {{/each}}
     </div>
