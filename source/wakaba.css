@@ -35,7 +35,7 @@ body {
 #container > header {
     flex-basis: 100%;
     flex-grow: 1;
-    height: calc(96px + 16px);
+    height: calc(96px + 96px + 16px + 16px);
 }
 
 #container > main {
@@ -96,20 +96,32 @@ body > nav a:active {
 
 /***************************************************************************/
 /* site title */
+@font-face {
+    /*
+      https://fonts.google.com/specimen/Caveat
+    */
+    font-family: 'Caveat';
+    src: url('Caveat-VariableFont_wght.ttf') format('woff2 supports variations'),
+       url('Caveat-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 400 700;
+}
+
 #container > header {
-    padding-top: 48px;
-    padding-left: 16px;
+    padding-top: 24px;
 }
 
 #container > header h1 a {
-    font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: calc(96px + 32px);
+    font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #224444;
     text-shadow: 1px 1px 2px #fff;
 }
 
 #container > header p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: -16px;
+    padding-left: 16px;
+    font-size: 36px;
+    font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #336666;
     text-shadow: 1px 1px 2px #fff;
 }
