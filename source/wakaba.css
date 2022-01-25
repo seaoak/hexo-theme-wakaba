@@ -212,9 +212,15 @@ main article .post_content h6 {
     margin-bottom: 16px;
 }
 
-main article ul, main article ol, main article dl {
+main article .post_content ul,
+main article .post_content ol,
+main article .post_content dl {
     margin-left: 24px;
     margin-bottom: 16px;
+}
+
+main article .post_content img {
+    border: 1px #699 dotted;
 }
 
 main .highlight {
