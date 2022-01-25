@@ -1,6 +1,11 @@
-* {
+address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, main, nav, section,
+blockquote, dd, div, dl, dt, figcaption, figure, hr, li, ol, p, pre, ul,
+a, abbr, b, cite, code, kbd, mark, q,
+caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr,
+button, datalist, fieldset, form, input, label, legend, meter, optgroup, progress, select, textarea,
+html, body {
     color: Black;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-family: "Meiryo UI", sans-serif;
