@@ -19,9 +19,11 @@ body {
 }
 
 #container {
+    flex-shrink: 1;
+    min-width: 1px;
+    max-width: calc(896px + 256px);
     display: flex;
     flex-wrap: wrap;
-    max-width: 80rem;
 }
 
 #container > header {
@@ -34,13 +36,15 @@ body {
 #container > main {
     flex-basis: 0;
     flex-grow: 999;
-    min-inline-size: 50rem;
+    flex-shrink: 1;
+    min-inline-size: 896px;
     background-color: #f0ffff;
 }
 
 #container > aside {
-    flex-basis: 20rem;
+    flex-basis: 256px;
     flex-grow: 1;
+    flex-shrink: 0;
     background-color: #f0fff0;
 }
 
