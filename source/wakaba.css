@@ -26,9 +26,10 @@ body {
 #container {
     flex-shrink: 1;
     min-width: 1px;
-    max-width: calc(896px + 256px);
+    max-width: calc(896px + 16px + 256px);
     display: flex;
     flex-wrap: wrap;
+    column-gap: 16px;
 }
 
 #container > header {
@@ -116,7 +117,7 @@ body > nav a:active {
 /***************************************************************************/
 /* artiles */
 main article {
-    margin: 0 32px 32px 0;
+    margin-bottom: 32px;
     padding: 16px;
     background-color: #f9f9f9;
     border-radius: 16px;
