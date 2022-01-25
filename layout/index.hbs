@@ -46,7 +46,9 @@
           {{#if this.categories}}
           <ul class="post_categories">
             {{#each this.categories}}
+            {{#each this}}
             <li>Category: {{this}}</li>  
+            {{/each}}
             {{/each}}
           </ul>
           {{/if}}
