@@ -57,12 +57,38 @@ body > footer {
 }
 
 /***************************************************************************/
+/* global navigation */
+body > nav {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 4px 16px 8px 0;
+    background-color: #99cccc;
+    box-shadow: inset 0 -2px 4px #ffffff;
+}
+
+body > nav ul li {
+    list-style: none;
+    display: inline;
+}
+
+body > nav a {
+    padding: 8px 4px;
+    margin: 4px;
+    text-shadow: 1px 1px 2px Blue;
+}
+
+body > nav a:hover,
+body > nav a:active {
+    color: Red;
+}
+
+/***************************************************************************/
 /* each elements */
-a {
+main a {
     color: Blue;
 }
 
-a:hover, a:active {
+main a:hover, main a:active {
     color: Red;
     text-decoration: underline;
 }
