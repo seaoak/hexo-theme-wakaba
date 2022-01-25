@@ -115,6 +115,13 @@ body > nav a:active {
 }
 
 /***************************************************************************/
+/* global footer */
+body > footer {
+    padding: 32px;
+    text-align: center;
+}
+
+/***************************************************************************/
 /* artiles */
 main article {
     margin-bottom: 32px;
