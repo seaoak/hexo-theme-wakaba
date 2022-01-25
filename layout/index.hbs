@@ -66,12 +66,20 @@
         </footer>
       </article>
       {{/inline}}
+      {{#if page.posts}}
       {{#each page.posts}}
       {{#each this}}
       {{log this.tags.length}}
       {{> article}}
       {{/each}}
       {{/each}}
+      {{/if}}
+      {{!-- ========== --}}
+      {{#if page.permalink}}
+      {{#with page}}
+      {{> article}}
+      {{/with}}
+      {{/if}}
     </div>
   </main>
   <aside id="sidebar">
