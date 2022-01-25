@@ -34,7 +34,7 @@ body {
 #container > header {
     flex-basis: 100%;
     flex-grow: 1;
-    height: 20ex;
+    height: 96px;
 }
 
 #container > main {
@@ -91,6 +91,26 @@ body > nav a {
 body > nav a:hover,
 body > nav a:active {
     color: Red;
+}
+
+/***************************************************************************/
+/* site title */
+#container > header {
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+#container > header h1 a {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #224444;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+#container > header p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #336666;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 /***************************************************************************/
