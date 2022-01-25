@@ -43,6 +43,7 @@
         <div class="post_content">{{{this.content}}}</div>
         {{/if}}
         <footer>
+          {{#if this.categories}}
           {{#if this.categories.length}}
           <ul class="post_categories">
             {{#each this.categories}}
@@ -53,6 +54,7 @@
           </ul>
           {{else}}
           <p>Category: ---</p>
+          {{/if}}
           {{/if}}
           {{!--
           {{#if this.tags}}
