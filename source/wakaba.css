@@ -127,6 +127,16 @@ body > nav a:active {
 }
 
 /***************************************************************************/
+/* sidebar */
+#sidebar section {
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px #cee, -1px -1px 2px #cee;
+}
+
+/***************************************************************************/
 /* global footer */
 body > footer {
     padding: 32px;

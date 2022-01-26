@@ -140,13 +140,53 @@
     </div>
   </main>
   <aside id="sidebar">
-    {{#each theme.sidebar.widgets}}
-    {{#if this}}
-    <section>
-      <h5>{{this}}</h5>
-      <p>Not implemented yet.</p>
+    {{#*inline "intro"}}
+    <section class="widget_intro">
+      <h1>Intro</h1>
     </section>
-    {{/if}}
+    {{/inline}}
+    {{#*inline "search"}}
+    <section class="widget_search">
+      <h1>Search</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "recent_posts"}}
+    <section class="widget_recent_posts">
+      <h1>Recent Posts</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "archive"}}
+    <section class="widget_archive">
+      <h1>Archive</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "tagcloud"}}
+    <section class="widget_tagcloud">
+      <h1>Tag Cloud</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "tag"}}
+    <section class="widget_tag">
+      <h1>Tag</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "category"}}
+    <section class="widget_category">
+      <h1>Category</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "links"}}
+    <section class="widget_links">
+      <h1>Links</h1>
+    </section>
+    {{/inline}}
+    {{#*inline "notice"}}
+    <section class="widget_notice">
+      <h1>Notice</h1>
+    </section>
+    {{/inline}}
+    {{#each theme.sidebar.widgets}}
+    {{> (lookup ../theme.sidebar.widgets @index) }}
     {{/each}}
   </aside>
   </div><!-- id="container" -->
