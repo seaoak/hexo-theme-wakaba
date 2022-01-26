@@ -94,9 +94,9 @@
         </ol>
       </article>
       <div class="index_pagenation">
-        <p>{{#if page.prev}}<a href="/{{{page.prev.path}}}">Previous</a>{{/if}}</p>
+        <p>{{#if page.prev}}<a href="/{{{page.prev_link}}}">Previous</a>{{/if}}</p>
         <p><a href="/">Home</a></p>
-        <p>{{#if page.next}}<a href="/{{{page.next.path}}}">Next</a>{{/if}}</p>
+        <p>{{#if page.next}}<a href="/{{{page.next_link}}}">Next</a>{{/if}}</p>
       </div>
       {{/inline}}
       {{!-- ================================================== --}}
@@ -107,6 +107,11 @@
       {{> article}}
       {{/each}}
       {{/each}}
+      <div class="index_pagenation">
+        <p>{{#if page.prev}}<a href="/{{{page.prev_link}}}">Previous</a>{{/if}}</p>
+        <p><a href="/">Home</a></p>
+        <p>{{#if page.next}}<a href="/{{{page.next_link}}}">Next</a>{{/if}}</p>
+      </div>
       {{/if}}{{/if}}{{/if}}{{/if}}
       {{!-- ================================================== --}}
       {{#if page.permalink}}
@@ -114,9 +119,9 @@
       {{> article}}
       {{/with}}
       <div class="post_pagenation">
-        <p>{{#if page.prev}}<a href="/{{{page.prev.path}}}">{{page.prev.title}}</a>{{/if}}</p>
+        <p>{{#if page.prev}}Previous: <a href="/{{{page.prev.path}}}">{{page.prev.title}}</a>{{/if}}</p>
         <p><a href="/">Home</a></p>
-        <p>{{#if page.next}}<a href="/{{{page.next.path}}}">{{page.next.title}}</a>{{/if}}</p>
+        <p>{{#if page.next}}Next: <a href="/{{{page.next.path}}}">{{page.next.title}}</a>{{/if}}</p>
       </div>
       {{/if}}
       {{!-- ================================================== --}}

@@ -266,3 +266,32 @@ main article code {
 .banner p {
     text-indent: 32px;
 }
+
+.index_pagenation,
+.post_pagenation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.index_pagenation p:nth-child(1),
+.post_pagenation p:nth-child(1) {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.index_pagenation p:nth-child(3),
+.post_pagenation p:nth-child(3) {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.index_pagenation p:nth-child(2),
+.post_pagenation p:nth-child(2) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 5rem;
+    padding: 0 16px;
+    border-left: 3px #699 solid;
+    border-right: 3px #699 solid;
+}
