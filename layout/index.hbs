@@ -67,15 +67,48 @@
         </footer>
       </article>
       {{/inline}}
-      {{#if page.posts}}
+      {{!-- ================================================== --}}
+      {{#*inline "banner"}}
+      <li class="banner">
+        <h3><a href="/{{{this.path}}}">{{this.title}}</a></h3>
+        <p>
+          <span class="post_date">{{this.date}}</span>
+          {{#if this.updated}}
+          <span class="post_updated">(updated: {{this.updated}})</span>
+          {{/if}}
+        </p>
+        {{!-- TODO: How about categories/tags? --}}
+      </li>
+      {{/inline}}
+      {{#*inline "indexPage"}}
+      <article>
+        <header>
+          <h1><a href="./">{{> @partial-block}}</a></h1>
+        </header>
+        <ol class="banner_list">
+          {{#each page.posts}}
+          {{#each this}}
+          {{> banner}}
+          {{/each}}
+          {{/each}}
+        </ol>
+      </article>
+      <div class="index_pagenation">
+        <p>{{#if page.prev}}<a href="/{{{page.prev.path}}}">Previous</a>{{/if}}</p>
+        <p><a href="/">Home</a></p>
+        <p>{{#if page.next}}<a href="/{{{page.next.path}}}">Next</a>{{/if}}</p>
+      </div>
+      {{/inline}}
+      {{!-- ================================================== --}}
+      {{#if page.posts}}{{#if page.archive}}{{else}}{{#if page.category}}{{else}}{{#if page.tag}}{{else}}
       {{#each page.posts}}
       {{#each this}}
       {{log this.tags.length}}
       {{> article}}
       {{/each}}
       {{/each}}
-      {{/if}}
-      {{!-- ========== --}}
+      {{/if}}{{/if}}{{/if}}{{/if}}
+      {{!-- ================================================== --}}
       {{#if page.permalink}}
       {{#with page}}
       {{> article}}
@@ -86,6 +119,18 @@
         <p>{{#if page.next}}<a href="/{{{page.next.path}}}">{{page.next.title}}</a>{{/if}}</p>
       </div>
       {{/if}}
+      {{!-- ================================================== --}}
+      {{#if page.posts}}{{#if page.archive}}
+      {{#> indexPage}}Archives{{/indexPage}}
+      {{/if}}{{/if}}
+      {{!-- ================================================== --}}
+      {{#if page.posts}}{{#if page.tag}}
+      {{#> indexPage}}Tag: {{page.tag}}{{/indexPage}}
+      {{/if}}{{/if}}
+      {{!-- ================================================== --}}
+      {{#if page.posts}}{{#if page.category}}
+      {{#> indexPage}}Category: {{page.category}}{{/indexPage}}
+      {{/if}}{{/if}}
       {{!-- ================================================== --}}
     </div>
   </main>

@@ -257,3 +257,12 @@ main article code {
     font-family: monospace;
     background-color: #e0f0f0;
 }
+
+.banner {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.banner p {
+    text-indent: 32px;
+}
