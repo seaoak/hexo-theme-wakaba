@@ -136,6 +136,38 @@ body > nav a:active {
     box-shadow: 2px 2px 4px #cee, -1px -1px 2px #cee;
 }
 
+#sidebar section a {
+    color: Blue;
+}
+
+#sidebar section a:hover, main a:active {
+    color: Red;
+    text-decoration: underline;
+}
+
+#sidebar section p {
+    margin-bottom: 8px;
+}
+
+#sidebar section ul {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+#sidebar section li {
+    margin-bottom: 8px;
+}
+
+#sidebar section img {
+    max-width: 100%;
+}
+
+.widget_intro li::before {
+    /* https://unicode-table.com/en/sets/arrow-symbols/ */
+    content: "\27A4  ";
+    color: #699;
+}
+
 /***************************************************************************/
 /* global footer */
 body > footer {

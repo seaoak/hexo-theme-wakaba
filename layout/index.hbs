@@ -142,7 +142,17 @@
   <aside id="sidebar">
     {{#*inline "intro"}}
     <section class="widget_intro">
-      <h1>Intro</h1>
+      {{#if theme.intro.photo}}<p><img src="/{{{theme.intro.photo}}}" /></p>{{/if}}
+      <p>Author: {{config.author}}</p>
+      {{#if theme.intro.description}}<p>{{theme.intro.description}}</p>{{/if}}
+      {{#if theme.intro.links.length}}
+      <ul>
+        {{#each theme.intro.links}}
+        <li><a href="{{{this.url}}}">{{this.title}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{#if theme.intro.email_img}}<p><img src="/{{{theme.intro.email_img}}}" /></p>{{/if}}
     </section>
     {{/inline}}
     {{#*inline "search"}}
@@ -186,7 +196,7 @@
     </section>
     {{/inline}}
     {{#each theme.sidebar.widgets}}
-    {{> (lookup ../theme.sidebar.widgets @index) }}
+    {{> (lookup ../theme.sidebar.widgets @index) .. }}
     {{/each}}
   </aside>
   </div><!-- id="container" -->

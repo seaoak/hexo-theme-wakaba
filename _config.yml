@@ -64,8 +64,7 @@ sidebar:
 intro:
   photo: img/self-photo.png ## "path/to/file" or URL
   description: |
-    A user of [Hexo](https://hexo.io).
-    If you like this Hexo theme "Wakaba", please STAR [its GitHub repository](https://github.com/seaoak/hexo-theme-wakaba).
+    A user of Hexo.
   email_img: img/not-easily-guessable-name.png ## "path/to/file" or URL
   links:
     - title: Homepage
