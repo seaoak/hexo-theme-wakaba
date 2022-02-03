@@ -36,6 +36,10 @@ nav:
     path: /archives/
     icon: fa-fei
 
+# Archive page / Archive widget
+archive:
+  date_format: YYYY年M月
+
 # Site search
 search:
   url_template: https://search.example.com/?domain=`domain`&path=`root`&keywords=`text`

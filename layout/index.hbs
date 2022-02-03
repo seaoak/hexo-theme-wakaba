@@ -175,6 +175,15 @@
     {{#*inline "archive"}}
     <section class="widget_archive">
       <h1>Archive</h1>
+      <ul>
+        <li><a href="/{{{config.archive_dir}}}/">All posts</a></li>
+        {{#each site.posts}}
+        {{#each (getLinksForArchives this ../config.archive_generator.monthly ../theme.archive.date_format ../config.archive_dir) }}
+        {{log this.count}}
+        <li><a href="/{{{this.path}}}">{{this.label}}{{#if ../../theme.sidebar.show_count.archive}} ({{this.count}}){{/if}}</a></li>
+        {{/each}}
+        {{/each}}
+      </ul>
     </section>
     {{/inline}}
     {{#*inline "tagcloud"}}
