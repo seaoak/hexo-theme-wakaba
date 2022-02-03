@@ -163,6 +163,13 @@
     {{#*inline "recent_posts"}}
     <section class="widget_recent_posts">
       <h1>Recent Posts</h1>
+      <ul>
+        {{#each site.posts}}
+        {{#each (getRecentPosts this 10) }}
+        <li><a href="/{{{this.path}}}">{{this.title}}</a></li>
+        {{/each}}
+        {{/each}}
+      </ul>
     </section>
     {{/inline}}
     {{#*inline "archive"}}

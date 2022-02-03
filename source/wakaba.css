@@ -145,6 +145,12 @@ body > nav a:active {
     text-decoration: underline;
 }
 
+#sidebar section h1 {
+    margin-bottom: 8px;
+    font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
 #sidebar section p {
     margin-bottom: 8px;
 }
