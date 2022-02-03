@@ -294,7 +294,13 @@ main .highlight .code {
     padding-left: 4px;
 }
 
-main article code {
+main article .post_content > pre {
+    margin-bottom: 16px;
+    border: 1px #699 dotted;
+    background-color: #f0f0f0;
+}
+
+main article p code {
     padding: 4px;
     font-family: monospace;
     background-color: #e0f0f0;
