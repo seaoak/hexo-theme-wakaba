@@ -181,6 +181,13 @@
     {{#*inline "tagcloud"}}
     <section class="widget_tagcloud">
       <h1>Tag Cloud</h1>
+      {{#if site.tags.length}}
+      <ul>
+        {{#each site.tags.data}}
+        <li><a href="/{{{this.path}}}">{{this.name}}{{#if ../theme.sidebar.show_count.tagcloud}} ({{this.posts.length}}){{/if}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
     </section>
     {{/inline}}
     {{#*inline "tag"}}
