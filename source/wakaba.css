@@ -210,6 +210,34 @@ main article .post_content {
     line-height: 1.8;
 }
 
+/*----------*/
+main article .post_categories {
+    margin-top: 16px;
+    display: flex;
+}
+
+main article .post_categories::before {
+    content: "Category: ";
+}
+
+main article .post_categories li {
+    display: inline;
+    margin-left: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-top: 1px #699 solid;
+    border-right: 1px #699 solid;
+    border-bottom: 1px #699 solid;
+    border-left: 5px #699 solid;
+    list-style: none;
+}
+
+main article .post_categories li:hover,
+main article .post_categories li:active {
+    background-color: #ccffee;
+}
+
+/*----------*/
 main article .post_tags {
     margin-top: 16px;
     display: flex;
@@ -236,6 +264,7 @@ main article .post_tags li:active {
     background-color: #ccffee;
 }
 
+/*----------*/
 main article > footer {
     margin-top: 16px;
     margin-bottom: 16px;
