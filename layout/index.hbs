@@ -55,15 +55,13 @@
           <p>Category: ---</p>
           {{/if}}
           {{/if}}
-          {{!--
-          {{#if this.tags}}
+          {{#if this.tags.length}}
           <ul class="post_tags">
-            {{#each this.tags}}
-            <li>Tag: {{this}}</li>
+            {{#each this.tags.data}}
+            <li><a href="/{{{this.path}}}">{{this.name}}</a></li>
             {{/each}}
           </ul>
           {{/if}}
-          --}}
         </footer>
       </article>
       {{/inline}}
