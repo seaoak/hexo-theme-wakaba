@@ -5,7 +5,7 @@ caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr,
 button, datalist, fieldset, form, input, label, legend, meter, optgroup, progress, select, textarea,
 html, body {
     color: Black;
-    font-size: 16px;
+    font-size: inherit;
     font-weight: normal;
     font-style: normal;
     font-family: "Meiryo UI", sans-serif;
@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 16px;
 }
 
 #container {
@@ -134,6 +135,7 @@ body > nav a:active {
     background-color: #f9f9f9;
     border-radius: 16px;
     box-shadow: 2px 2px 4px #cee, -1px -1px 2px #cee;
+    font-size: 14px;
 }
 
 #sidebar section a {
