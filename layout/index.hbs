@@ -229,6 +229,9 @@
     {{#*inline "notice"}}
     <section class="widget_notice">
       <h1>Notice</h1>
+      {{#if theme.notice}}
+      {{{theme.notice.body_html}}}
+      {{/if}}
     </section>
     {{/inline}}
     {{#each theme.sidebar.widgets}}

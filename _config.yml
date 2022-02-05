@@ -87,9 +87,13 @@ links:
 
 # Notice widget
 notice:
-  body: |
-    Except as otherwise noted, the content of this page is licensed under [the Creative Commons Attribution 4.0 License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode), and code samples are licensed under the MIT License (the X11 License).
-    Copyright (C) 2017 [Seaoak](https://seaoak.jp)
+  body_html: |
+    <p>Except as otherwise noted, the content of this page is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/legalcode">the Creative Commons Attribution 4.0 License (CC BY 4.0)</a>,
+    and code samples are licensed under
+    <a href="https://directory.fsf.org/wiki/License:X11">the MIT License (the X11 License)</a>.
+    </p>
+    <p>Copyright &copy; 2020-2022 <a href="https://www.example.com">Foobar</a></p>
 
 # Feed
 feed:
