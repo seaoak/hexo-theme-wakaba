@@ -205,6 +205,13 @@
     {{#*inline "category"}}
     <section class="widget_category">
       <h1>Category</h1>
+      {{#if site.categories.length}}
+      <ul>
+        {{#each site.categories.data}}
+        <li><a href="/{{{this.path}}}">{{this.name}}{{#if ../theme.sidebar.show_count.category}} ({{this.posts.length}}){{/if}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
     </section>
     {{/inline}}
     {{#*inline "links"}}
