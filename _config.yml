@@ -1,5 +1,9 @@
 # Hexo Theme configuration file
 
+# Copyright
+copyright_html: |
+  <p>Copyright &copy; 2020-2022 <a href="https://www.example.com">Foobar</a></p>
+
 # Font
 font:
   stylesheets:
@@ -93,7 +97,6 @@ notice:
     and code samples are licensed under
     <a href="https://directory.fsf.org/wiki/License:X11">the MIT License (the X11 License)</a>.
     </p>
-    <p>Copyright &copy; 2020-2022 <a href="https://www.example.com">Foobar</a></p>
 
 # Feed
 feed:

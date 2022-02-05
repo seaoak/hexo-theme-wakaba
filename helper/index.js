@@ -39,10 +39,15 @@ function lt(arg1, arg2) {
     return arg1 < arg2;
 }
 
+function now() {
+    return Date.now();
+}
+
 module.exports = (hexo) => {
     return {
         getLinksForArchives,
         getRecentPosts,
         lt,
+        now,
     };
 };

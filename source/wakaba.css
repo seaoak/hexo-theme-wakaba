@@ -208,6 +208,16 @@ body > footer {
     text-align: center;
 }
 
+body > footer a {
+    color: Blue;
+}
+
+body > footer a:hover,
+body > footer a:active {
+    color: Red;
+    text-decoration: underline;
+}
+
 /***************************************************************************/
 /* artiles */
 main article {

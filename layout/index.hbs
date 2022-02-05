@@ -249,6 +249,12 @@
     </ul>
   </nav>
   <footer id="global_footer">
-    <p class="copyright">Copyright (C) 2017, {{config.author}}</p>
+    <div class="copyright">
+      {{#if theme.copyright_html}}
+      {{{theme.copyright_html}}}
+      {{else}}
+      <p>Copyright &copy; {{date (now) "YYYY"}} {{config.author}}</p>
+      {{/if}}
+    </div>
   </footer>
 </body></html>
