@@ -217,6 +217,13 @@
     {{#*inline "links"}}
     <section class="widget_links">
       <h1>Links</h1>
+      {{#if theme.links}}
+      <ul>
+        {{#each theme.links}}
+        <li><a href="{{{this.url}}}">{{this.title}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
     </section>
     {{/inline}}
     {{#*inline "notice"}}
