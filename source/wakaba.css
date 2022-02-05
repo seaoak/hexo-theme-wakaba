@@ -206,8 +206,11 @@ body > nav a:active {
 /***************************************************************************/
 /* global footer */
 body > footer {
+    margin-top: 32px;
     padding: 32px;
-    text-align: center;
+    text-align: right;
+    background-color: #99cccc;
+    box-shadow: inset 0 -2px 4px #ccffee;
 }
 
 body > footer a {

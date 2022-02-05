@@ -22,6 +22,16 @@ function makeTableForArchives(posts, isMonthly, dateFormat, dirPrefix) {
 //===========================================================================
 // helpers
 
+function getCopyrightYear(posts) {
+    const list = posts.map(post => post.date.format('YYYY')).map(Number);
+    list.push((new Date()).getFullYear());
+    list.sort((a, b) => a - b);
+    const start = list[0];
+    const last = list.pop();
+    if (last && last !== start) return `${start}-${last}`;
+    return `${start}`;
+}
+
 function getLinksForArchives(posts, isMonthly, dateFormat, dirPrefix) {
     const table = makeTableForArchives(posts, isMonthly, dateFormat, dirPrefix);
     const list = Object.values(table);
@@ -45,6 +55,7 @@ function now() {
 
 module.exports = (hexo) => {
     return {
+        getCopyrightYear,
         getLinksForArchives,
         getRecentPosts,
         lt,

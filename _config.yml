@@ -1,9 +1,5 @@
 # Hexo Theme configuration file
 
-# Copyright
-copyright_html: |
-  <p>Copyright &copy; 2020-2022 <a href="https://www.example.com">Foobar</a></p>
-
 # Font
 font:
   stylesheets:

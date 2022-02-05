@@ -249,12 +249,6 @@
     </ul>
   </nav>
   <footer id="global_footer">
-    <div class="copyright">
-      {{#if theme.copyright_html}}
-      {{{theme.copyright_html}}}
-      {{else}}
-      <p>Copyright &copy; {{date (now) "YYYY"}} {{config.author}}</p>
-      {{/if}}
-    </div>
+    <p class="copyright">Copyright &copy; {{getCopyrightYear site.posts}} <a href="/">{{config.author}}</a></p>
   </footer>
 </body></html>
