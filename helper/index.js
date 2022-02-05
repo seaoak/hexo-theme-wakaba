@@ -22,6 +22,11 @@ function makeTableForArchives(posts, isMonthly, dateFormat, dirPrefix) {
 //===========================================================================
 // helpers
 
+function date(obj, fmt) {
+    // https://momentjs.com/
+    return obj.format(fmt);
+}
+
 function getCopyrightYear(posts) {
     const list = posts.map(post => post.date.format('YYYY')).map(Number);
     list.push((new Date()).getFullYear());
@@ -55,6 +60,7 @@ function now() {
 
 module.exports = (hexo) => {
     return {
+        date,
         getCopyrightYear,
         getLinksForArchives,
         getRecentPosts,

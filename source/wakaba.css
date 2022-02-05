@@ -244,7 +244,9 @@ main article > header h1 a {
 
 main article > header div {
     margin-top: 4px;
+    margin-right: 8px;
     text-align: right;
+    font-weight: bold;
 }
 
 main article .post_content {

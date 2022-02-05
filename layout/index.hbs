@@ -29,9 +29,11 @@
         <header>
           <h1><a href="/{{{this.path}}}">{{this.title}}</a></h1>
           <div>
-            <span class="post_date">{{this.date}}</span>
+            <span class="post_date">{{date this.date config.date_format}}</span>
             {{#if this.updated}}
-            <span class="post_updated">(updated: {{this.updated}})</span>
+            {{#if (lt this.date this.updated) }}
+            <span class="post_updated">(updated: {{date this.updated config.date_format}})</span>
+            {{/if}}
             {{/if}}
           </div>
           {{#if this.description}}
@@ -96,7 +98,7 @@
       {{#each page.posts}}
       {{#each this}}
       {{log this.tags.length}}
-      {{> article}}
+      {{> article this=this config=../../config}}
       {{/each}}
       {{/each}}
       <div class="index_pagenation">
@@ -108,7 +110,7 @@
       {{!-- ================================================== --}}
       {{#if page.permalink}}
       {{#with page}}
-      {{> article}}
+      {{> article this=this config=../config}}
       {{/with}}
       <div class="post_pagenation">
         <p>{{#if page.prev}}Previous: <a href="/{{{page.prev.path}}}">{{page.prev.title}}</a>{{/if}}</p>
