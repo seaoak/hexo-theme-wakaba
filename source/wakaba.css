@@ -371,6 +371,11 @@ main article .post_content img {
     border: 1px #699 dotted;
 }
 
+main article .post_content > pre,
+main article .post_content figure {
+    overflow-x: auto;
+}
+
 main .highlight {
     margin-bottom: 16px;
     border: 1px #699 dotted;
