@@ -66,9 +66,11 @@
       <li class="banner">
         <h3><a href="/{{{this.path}}}">{{this.title}}</a></h3>
         <p>
-          <span class="post_date">{{this.date}}</span>
+          <span class="post_date">{{date this.date config.date_format}}</span>
           {{#if this.updated}}
-          <span class="post_updated">(updated: {{this.updated}})</span>
+          {{#if (lt this.date this.updated) }}
+          <span class="post_updated">(updated: {{date this.updated config.date_format}})</span>
+          {{/if}}
           {{/if}}
         </p>
         {{!-- TODO: How about categories/tags? --}}
@@ -80,10 +82,8 @@
           <h1><a href="./">{{> @partial-block}}</a></h1>
         </header>
         <ol class="banner_list">
-          {{#each page.posts}}
-          {{#each this}}
-          {{> banner}}
-          {{/each}}
+          {{#each page.posts.data}}
+          {{> banner this=this config=../config}}
           {{/each}}
         </ol>
       </article>
