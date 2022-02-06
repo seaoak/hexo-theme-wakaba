@@ -1,12 +1,8 @@
 # Hexo Theme configuration file
 
-# Font
-font:
-  stylesheets:
-    - ## "path/to/file" or URL
-  site_title: ## font-family
-  site_subtitle: ## font-family
-  body: ## font-family
+# User CSS (stylesheet)
+css_files:
+  - ## "/path/to/file" or URL
 
 # Background
 background:

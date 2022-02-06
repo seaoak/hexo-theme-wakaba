@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     -->
     <link rel="stylesheet" href="/wakaba.css" />
-
-    {{#each theme.font.stylesheets}}
+    {{#each theme.css_files}}
     {{#if this}}
-    <link rel="stylesheet" href="{{this}}" />
+    <link rel="stylesheet" href="{{{this}}}" />
     {{/if}}
     {{/each}}
-
 </head>
 <body>
   <div id="container">
