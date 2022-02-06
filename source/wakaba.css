@@ -6,13 +6,23 @@ button, datalist, fieldset, form, input, label, legend, meter, optgroup, progres
 html, body {
     color: Black;
     font-size: inherit;
-    font-weight: normal;
-    font-style: normal;
-    font-family: "Meiryo UI", sans-serif;
-    text-decoration: none;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: inherit;
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+body {
+    /*
+        https://willcloud.jp/knowhow/font-family/
+        https://ics.media/entry/14087/
+    */
+    font-family: "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: 500; /* workaround for "Yu Gothic" */
+    font-feature-settings: "pwid" 1; /* enable proportional metrics of OpenType font */
 }
 
 /***************************************************************************/
