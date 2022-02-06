@@ -25,6 +25,10 @@ body {
     font-feature-settings: "pwid" 1; /* enable proportional metrics of OpenType font */
 }
 
+body pre, body code {
+    font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace;
+}
+
 /***************************************************************************/
 /* 2 column design (automatically fallback to 1 column for mobile devices) */
 body {
@@ -396,7 +400,6 @@ main .highlight {
 
 main .highlight .code pre, main .highlight .gutter pre {
     font-size: 12px;
-    font-family: monospace;
 }
 
 main .highlight .gutter {
@@ -422,7 +425,6 @@ main article .post_content > pre {
 
 main article p code {
     padding: 4px;
-    font-family: monospace;
     background-color: #e0f0f0;
 }
 
