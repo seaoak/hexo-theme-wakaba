@@ -1,6 +1,6 @@
 address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, main, nav, section,
 blockquote, dd, div, dl, dt, figcaption, figure, hr, li, ol, p, pre, ul,
-a, abbr, b, cite, code, kbd, mark, q,
+a, abbr, b, cite, code, em, kbd, mark, q, s, strong, u,
 caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr,
 button, datalist, fieldset, form, input, label, legend, meter, optgroup, progress, select, textarea,
 html, body {
@@ -29,7 +29,7 @@ body {
     color: Black;
 }
 
-body pre, body code {
+body pre, body code, body kbd {
     font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace;
 }
 
@@ -41,6 +41,22 @@ body pre, body code {
     src: url('Caveat-VariableFont_wght.ttf') format('woff2 supports variations'),
          url('Caveat-VariableFont_wght.ttf') format('woff2-variations');
     font-weight: 400 700;
+}
+
+body b, body strong {
+    font-weight: bold;
+}
+
+body em, body i {
+    font-style: italic;
+}
+
+body s {
+    text-decoration: line-through;
+}
+
+body u {
+    text-decoration: underline;
 }
 
 /***************************************************************************/
@@ -429,6 +445,7 @@ main article .post_content pre[class*=language-].line-numbers {
     padding: 0 0 0 3.8em; /* overwrite prism.js */
 }
 
+main article p kbd,
 main article p code {
     padding: 4px;
     background-color: #e0f0f0;
