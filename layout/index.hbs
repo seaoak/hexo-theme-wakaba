@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{{{this}}}" />
     {{/if}}
     {{/each}}
+    {{#if config.highlight.enable}}
+    <link rel="stylesheet" href="/highlight.js/styles/default.min.css" />
+    {{/if}}
 </head>
 <body>
   <div id="container">
@@ -39,7 +42,9 @@
           {{/if}}
         </header>
         {{#if this.content}}
-        <div class="post_content">{{{this.content}}}</div>
+        <div class="post_content">
+{{{this.content}}}
+        </div>
         {{/if}}
         <footer>
           {{#if this.categories.length}}
@@ -96,7 +101,7 @@
       {{#each page.posts}}
       {{#each this}}
       {{log this.tags.length}}
-      {{> article this=this config=../../config}}
+      {{~> article this=this config=../../config ~}}
       {{/each}}
       {{/each}}
       <div class="index_pagenation">
@@ -108,7 +113,7 @@
       {{!-- ================================================== --}}
       {{#if page.permalink}}
       {{#with page}}
-      {{> article this=this config=../config}}
+      {{~> article this=this config=../config ~}}
       {{/with}}
       <div class="post_pagenation">
         <p>{{#if page.prev}}Previous: <a href="/{{{page.prev.path}}}">{{page.prev.title}}</a>{{/if}}</p>

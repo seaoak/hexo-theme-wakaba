@@ -390,34 +390,30 @@ main article .post_content img {
     border: 1px #699 dotted;
 }
 
-main article .post_content > pre,
-main article .post_content figure {
-    overflow-x: auto;
+main article .post_content > pre {
+    padding-left: 4px;
 }
 
-main .highlight {
+main article .post_content > pre,
+main article .post_content figure {
     margin-bottom: 16px;
     border: 1px #699 dotted;
     background-color: #f0f0f0;
-}
-
-main .highlight .code pre, main .highlight .gutter pre {
     font-size: 12px;
+    overflow-x: auto;
 }
 
-main .highlight .gutter {
+main .highlight .gutter { /* line numbers for highlight.js */
     padding-right: 4px;
     padding-left: 4px;
     border-right: 1px #699 dotted;
     text-align: right;
-}
-
-main .highlight .gutter pre {
     color: #699;
 }
 
-main .highlight .code {
-    padding-left: 4px;
+main article .post_content pre code.hljs {
+    width: calc(100% - 4px);
+    padding: 0 0 0 4px; /* overwrite highlight.js */
 }
 
 main article .post_content > pre {
