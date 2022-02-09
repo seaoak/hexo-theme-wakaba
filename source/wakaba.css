@@ -272,13 +272,21 @@ main article > header h1 {
 }
 
 main article > header h1 a {
-    font-size: 24px;
+    font-size: 32px;
+    color: black;
+    text-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+}
+
+main article > header h1 a:hover,
+main article > header h1 a:active {
+    text-decoration: none;
 }
 
 main article > header div {
     margin-top: 4px;
     margin-right: 8px;
     text-align: right;
+    color: #666;
     font-weight: bold;
 }
 
