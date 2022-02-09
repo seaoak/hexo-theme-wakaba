@@ -416,10 +416,16 @@ main article .post_content pre code.hljs {
     padding: 0 0 0 4px; /* overwrite highlight.js */
 }
 
-main article .post_content > pre {
-    margin-bottom: 16px;
-    border: 1px #699 dotted;
-    background-color: #f0f0f0;
+main article .post_content pre[class*=language-] code {
+    display: block;
+}
+
+main article .post_content pre[class*=language-] {
+    padding: 0 0 0 4px; /* overwrite prism.js */
+}
+
+main article .post_content pre[class*=language-].line-numbers {
+    padding: 0 0 0 3.8em; /* overwrite prism.js */
 }
 
 main article p code {
