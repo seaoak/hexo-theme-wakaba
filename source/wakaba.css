@@ -451,6 +451,22 @@ main article p code {
     background-color: #e0f0f0;
 }
 
+main article .post_content blockquote {
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding: 8px;
+    border-left: 3px double #699;
+    color: #666;
+}
+
+main article .post_content blockquote footer strong::before {
+    content: "\2E3B  "; /* Three-Em Dash https://unicode-table.com/en/2E3B/ */
+}
+
+main article .post_content blockquote footer strong::after {
+    content: " / ";
+}
+
 .banner {
     margin-top: 16px;
     list-style: none;
