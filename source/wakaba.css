@@ -387,6 +387,7 @@ main article .post_content dl {
 }
 
 main article .post_content img {
+    max-width: calc(100% - 1px - 1px);
     border: 1px #699 dotted;
 }
 
