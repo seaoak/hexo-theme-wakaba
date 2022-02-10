@@ -207,16 +207,6 @@ body > nav a:active {
     color: #699;
 }
 
-/*----------*/
-#sidebar .widget_tagcloud .post_tags a {
-    padding: 8px;
-}
-
-#sidebar .widget_tagcloud .post_tags a:hover,
-#sidebar .widget_tagcloud .post_tags a:active {
-    text-decoration: none;
-}
-
 /***************************************************************************/
 /* global footer */
 body > footer {
@@ -320,8 +310,7 @@ body .post_tags li {
 
 body .post_tags a {
     display: block;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding: 4px 8px;
 }
 
 body .post_tags a:hover,
