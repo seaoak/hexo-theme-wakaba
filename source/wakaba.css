@@ -385,6 +385,8 @@ body .post_tags li {
 body .post_tags a {
     display: block;
     padding: 4px 8px;
+    color: #336;
+    text-shadow: 1px 1px 2px #9cc;
 }
 
 body .post_tags a:hover,
