@@ -194,7 +194,7 @@
     <section class="widget_tagcloud">
       <h1>Tag Cloud</h1>
       {{#if site.tags.length}}
-      <ul>
+      <ul class="post_tags">
         {{#each site.tags.data}}
         <li><a href="/{{{this.path}}}">{{this.name}}{{#if ../theme.sidebar.show_count.tagcloud}} ({{this.posts.length}}){{/if}}</a></li>
         {{/each}}
