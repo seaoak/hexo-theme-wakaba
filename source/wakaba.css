@@ -218,6 +218,80 @@ body > footer {
 }
 
 /***************************************************************************/
+/* Archive / Category / Tag page */
+main .archive_page h2 { /* YEAR label */
+    width: 64px;
+    height: 64px;
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: #99cccc;
+    box-shadow: inset 0 -2px 4px #ccffee;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #336666;
+    line-height: 60px;
+    text-align: center;
+}
+
+main .archive_page > ol {
+    margin-left: calc(64px / 2 + 16px);
+    padding-top: 1px;
+    padding-bottom: 16px;
+    border-left: 3px #699 dotted;
+}
+
+main .archive_page .banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+    margin-top: 16px;
+    padding-left: calc(96px + 16px);
+    list-style: none;
+}
+
+main .archive_page .banner h3 {
+    padding-top: 4px;
+    text-shadow: 1px 1px 2px #9cc;
+}
+
+main .archive_page .banner h3 a {
+    color: #336;
+}
+
+main .archive_page .banner h3 a:hover,
+main .archive_page .banner h3 a:active {
+    text-decoration: none;
+    color: red;
+}
+
+main .archive_page .banner h3 a::before { /* circle mark on the line */
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    left: -10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px #699 dotted;
+}
+
+main .archive_page .banner h3 a:hover::before,
+main .archive_page .banner h3 a:active::before {
+    background-color: #ffcccc;
+    box-shadow: inset 0 0 4px #fff;
+}
+
+main .archive_page .banner .post_date {
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    font-size: 12px;
+}
+
+/***************************************************************************/
 /* artiles */
 main article {
     margin-bottom: 32px;
@@ -461,30 +535,6 @@ main article .post_content blockquote footer strong::before {
 
 main article .post_content blockquote footer strong::after {
     content: " / ";
-}
-
-/*----------*/
-main .archive_page h2 {
-    width: 64px;
-    height: 64px;
-    margin-top: 32px;
-    padding: 16px;
-    border-radius: 50%;
-    background-color: #99cccc;
-    box-shadow: inset 0 -2px 4px #ccffee;
-    font-size: 24px;
-    text-shadow: 1px 1px 2px #336666;
-    line-height: 60px;
-    text-align: center;
-}
-
-main .archive_page .banner {
-    margin-top: 16px;
-    list-style: none;
-}
-
-main .archive_page .banner p {
-    text-indent: 32px;
 }
 
 /*----------*/
