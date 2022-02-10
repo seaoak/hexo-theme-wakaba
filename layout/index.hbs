@@ -71,27 +71,36 @@
       {{#*inline "banner"}}
       <li class="banner">
         <h3><a href="/{{{this.path}}}">{{this.title}}</a></h3>
-        <p>
-          <span class="post_date">{{date this.date config.date_format}}</span>
-          {{#if this.updated}}
-          {{#if (lt this.date this.updated) }}
-          <span class="post_updated">(updated: {{date this.updated config.date_format}})</span>
-          {{/if}}
-          {{/if}}
-        </p>
-        {{!-- TODO: How about categories/tags? --}}
+        <p class="post_date">{{date this.date config.date_format}}</p>
+        {{#if this.categories.length}}
+        <ul class="post_categories">
+          {{#each this.categories.data}}
+          <li><a href="/{{{this.path}}}">{{this.name}}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
+        {{#if this.tags.length}}
+        <ul class="post_tags">
+          {{#each this.tags.data}}
+          <li><a href="/{{{this.path}}}">{{this.name}}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
       </li>
       {{/inline}}
       {{#*inline "indexPage"}}
-      <article>
+      <article class="archive_page">
         <header>
           <h1><a href="./">{{> @partial-block}}</a></h1>
         </header>
-        <ol class="banner_list">
-          {{#each page.posts.data}}
-          {{> banner this=this config=../config}}
+        {{#each (getLinksForArchives page.posts.data false "YYYY" config.archive_dir) }}
+        <h2>{{this.label}}</h2>
+        <ol>
+          {{#each this.posts}}
+          {{> banner this=this config=../../config}}
           {{/each}}
         </ol>
+        {{/each}}
       </article>
       <div class="index_pagenation">
         <p>{{#if page.prev}}<a href="/{{{page.prev_link}}}">Previous</a>{{/if}}</p>
