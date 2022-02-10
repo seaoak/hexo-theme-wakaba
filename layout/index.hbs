@@ -126,7 +126,11 @@
       {{/if}}
       {{!-- ================================================== --}}
       {{#if page.posts}}{{#if page.archive}}
+      {{#if page.month}}
+      {{#> indexPage}}Archives ({{date page.posts.data.[0].date theme.archive.date_format}}){{/indexPage}}
+      {{else}}
       {{#> indexPage}}Archives{{/indexPage}}
+      {{/if}}
       {{/if}}{{/if}}
       {{!-- ================================================== --}}
       {{#if page.posts}}{{#if page.tag}}
