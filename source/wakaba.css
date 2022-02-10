@@ -80,7 +80,6 @@ body {
 #container > header {
     flex-basis: 100%;
     flex-grow: 1;
-    height: calc(96px + 96px + 16px + 16px);
 }
 
 #container > main {
@@ -220,7 +219,7 @@ body > nav #global_nav_tags {
 }
 
 #container > header h1 a {
-    font-size: calc(96px + 32px);
+    font-size: clamp(16px, 16vw, calc(96px + 32px));
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #224444;
     text-shadow: 1px 1px 2px #fff;
@@ -234,7 +233,7 @@ body > nav #global_nav_tags {
 #container > header p {
     margin-top: -16px;
     padding-left: 16px;
-    font-size: 36px;
+    font-size: clamp(16px, 5vw, 36px);
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #336666;
     text-shadow: 1px 1px 2px #fff;
