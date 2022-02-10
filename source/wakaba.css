@@ -84,10 +84,10 @@ body {
 }
 
 #container > main {
-    flex-basis: 0;
+    flex-basis: 896px;
     flex-grow: 999;
     flex-shrink: 1;
-    min-inline-size: 896px;
+    min-inline-size: 1px; /* hack (I don't know why this works well) */
 }
 
 #container > aside {
@@ -472,6 +472,7 @@ body .post_tags a:active {
 /*----------*/
 body a {
     color: Blue;
+    word-break: break-word; /* workaround for long raw URL (autolink) */
 }
 
 body a:hover,
