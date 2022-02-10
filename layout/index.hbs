@@ -261,13 +261,28 @@
   </aside>
   </div><!-- id="container" -->
   <nav id="global_nav">
-    <ul>
-      {{#each theme.nav}}
-      {{#if this}}
-      <li class="{{this.icon}}"><a href="{{{this.path}}}">{{this.title}}</a></li>
-      {{/if}}
-      {{/each}}
-    </ul>
+    <input type="checkbox" id="menu_checkbox" />
+    <label for="menu_checkbox" id="menu_button"><span></span></label>
+    <div id="menu_body">
+      <ul id="global_nav_links">
+        {{#each theme.nav}}
+        {{#if this}}
+        {{#if this.path}}
+        <li><a href="{{{this.path}}}">{{this.title}}</a></li>
+        {{else}}
+        {{#if this.url}}
+        <li><a href="{{{this.url}}}">{{this.title}}</a></li>
+        {{/if}}
+        {{/if}}
+        {{/if}}
+        {{/each}}
+      </ul>
+      <ul id="global_nav_tags" class="post_tags">
+        {{#each site.tags.data}}
+        <li><a href="/{{{this.path}}}">{{this.name}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
   </nav>
   <footer id="global_footer">
     <p class="copyright">Copyright &copy; {{getCopyrightYear site.posts}} <a href="/">{{config.author}}</a></p>

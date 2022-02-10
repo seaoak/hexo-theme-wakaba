@@ -115,28 +115,101 @@ body {
 /***************************************************************************/
 /* global navigation */
 body > nav {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 4px 16px 8px 0;
+    min-height: 36px;
+    padding: 8px 16px 8px 0;
     background-color: #99cccc;
     box-shadow: inset 0 -2px 4px #ccffee;
+    text-align: right;
 }
 
-body > nav ul li {
+body > nav > input {
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    display: none;
+}
+
+body > nav > #menu_button {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 15%;
+    background-color: #f0fcfc;
+    box-shadow: 0 0 4px #cfe;
+    cursor: pointer;
+}
+
+body > nav > #menu_button span,
+body > nav > #menu_button span::before,
+body > nav > #menu_button span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 24px;
+    background-color: #699;
+    transition: all 0.25s ease-in-out;
+}
+
+body > nav > #menu_button span::before {
+    bottom: 8px;
+}
+
+body > nav > #menu_button span::after {
+    top: 8px;
+}
+
+body > nav > #menu_checkbox:checked ~ #menu_button span {
+    background-color: transparent;
+}
+
+body > nav > #menu_checkbox:checked ~ #menu_button span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+body > nav > #menu_checkbox:checked ~ #menu_button span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+body > nav > div {
+    margin-top: -256px;
+    transition: all 0.25s ease-in-out;
+}
+
+body > nav > #menu_checkbox:checked ~ div {
+    margin-top: 48px;
+}
+
+body > nav #global_nav_links li {
     list-style: none;
     display: inline;
 }
 
-body > nav a {
+body > nav #global_nav_links a {
     padding: 8px 4px;
     margin: 4px;
     color: black;
     text-shadow: 1px 1px 2px #336666;
 }
 
-body > nav a:hover,
-body > nav a:active {
+body > nav #global_nav_links a:hover,
+body > nav #global_nav_links a:active {
     text-decoration: none;
+    color: red;
+}
+
+body > nav #global_nav_tags {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    flex-direction: row-reverse;
 }
 
 /***************************************************************************/
