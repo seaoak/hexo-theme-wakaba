@@ -175,7 +175,8 @@ body > nav a:active {
     color: Blue;
 }
 
-#sidebar section a:hover, main a:active {
+#sidebar section a:hover,
+#sidebar section a:active {
     color: Red;
     text-decoration: underline;
 }
