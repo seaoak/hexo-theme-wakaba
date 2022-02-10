@@ -309,7 +309,7 @@ main .archive_page h2 { /* YEAR label */
 
 main .archive_page > ol {
     margin-left: calc(64px / 2 + 16px);
-    padding-top: 1px;
+    padding-top: 1px; /* hacky (I don't know why this works well) */
     padding-bottom: 16px;
     border-left: 3px #699 dotted;
 }
