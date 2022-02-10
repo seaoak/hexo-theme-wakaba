@@ -1,3 +1,9 @@
+:root {
+    --base-color:  #ccffee;
+}
+
+/***************************************************************************/
+/* reset default style */
 address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, main, nav, section,
 blockquote, dd, div, dl, dt, figcaption, figure, hr, li, ol, p, pre, ul,
 a, abbr, b, cite, code, em, kbd, mark, q, s, strong, u,
@@ -109,7 +115,7 @@ body > footer {
 /***************************************************************************/
 /* background */
 body {
-    background-color: #ccffee;
+    background-color: var(--base-color);
 }
 
 /***************************************************************************/
@@ -119,7 +125,7 @@ body > nav {
     padding: 8px 16px 8px 0;
     z-index: 10;
     background-color: #99cccc;
-    box-shadow: inset 0 -2px 4px #ccffee;
+    box-shadow: inset 0 -2px 4px var(--base-color);
     text-align: right;
 }
 
@@ -288,7 +294,7 @@ body > footer {
     padding: 32px;
     text-align: right;
     background-color: #99cccc;
-    box-shadow: inset 0 -2px 4px #ccffee;
+    box-shadow: inset 0 -2px 4px var(--base-color);
 }
 
 /***************************************************************************/
@@ -300,7 +306,7 @@ main .archive_page h2 { /* YEAR label */
     padding: 16px;
     border-radius: 50%;
     background-color: #99cccc;
-    box-shadow: inset 0 -2px 4px #ccffee;
+    box-shadow: inset 0 -2px 4px var(--base-color);
     font-size: 24px;
     text-shadow: 1px 1px 2px #336666;
     line-height: 60px;
