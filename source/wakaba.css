@@ -1,5 +1,6 @@
 :root {
     --base-color:  #ccffee;
+    --font-color-hyperlink: #069;
 }
 
 /***************************************************************************/
@@ -336,7 +337,7 @@ main .archive_page .banner h3 {
 }
 
 main .archive_page .banner h3 a {
-    color: #336;
+    color: var(--font-color-hyperlink);
 }
 
 main .archive_page .banner h3 a:hover,
@@ -477,7 +478,7 @@ body .post_tags a:active {
 
 /*----------*/
 body a {
-    color: Blue;
+    color: var(--font-color-hyperlink);
     word-break: break-word; /* workaround for long raw URL (autolink) */
 }
 
