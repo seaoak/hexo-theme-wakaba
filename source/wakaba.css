@@ -1,6 +1,7 @@
 :root {
     --base-color:  #ccffee;
     --font-color-hyperlink: #069;
+    --default-width-of-sidebar: 256px;
 }
 
 /***************************************************************************/
@@ -77,7 +78,7 @@ body {
 #container {
     flex-shrink: 1;
     min-width: 1px;
-    max-width: calc(896px + 16px + 256px);
+    max-width: calc(896px + 16px + var(--default-width-of-sidebar));
     display: flex;
     flex-wrap: wrap;
     column-gap: 16px;
@@ -97,7 +98,7 @@ body {
 }
 
 #container > aside {
-    flex-basis: 256px;
+    flex-basis: var(--default-width-of-sidebar);
     flex-grow: 1;
     flex-shrink: 0;
 }
@@ -278,7 +279,7 @@ body > nav #global_nav_tags {
 }
 
 #sidebar section img {
-    max-width: 100%;
+    max-width: min(100%, var(--default-width-of-sidebar));
 }
 
 .widget_links li::before,
