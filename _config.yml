@@ -65,7 +65,8 @@ intro:
   photo: img/self-photo.png ## "path/to/file" or URL
   description: |
     A user of Hexo.
-  email_img: img/not-easily-guessable-name.png ## "path/to/file" or URL
+  email_img_files:
+    - path: img/not-easily-guessable-name.png ## "path/to/file" or URL
   links:
     - title: Homepage
       url: https://www.example.com

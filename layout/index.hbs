@@ -165,7 +165,11 @@
         {{/each}}
       </ul>
       {{/if}}
-      {{#if theme.intro.email_img}}<p><img src="/{{{theme.intro.email_img}}}" /></p>{{/if}}
+      {{#if theme.intro.email_img_files}}
+      {{#each theme.intro.email_img_files}}
+      <p><img src="/{{{this.path}}}" /></p>
+      {{/each}}
+      {{/if}}
     </section>
     {{/inline}}
     {{#*inline "search"}}
