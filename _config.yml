@@ -4,6 +4,9 @@
 css_files:
   - ## "/path/to/file" or URL
 
+# Favicon file
+favicon: favicon.png ## "path/to/file" or URL
+
 # Background
 background:
   color:
