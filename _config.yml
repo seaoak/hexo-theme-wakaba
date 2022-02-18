@@ -37,7 +37,8 @@ nav:
 
 # Archive page / Archive widget
 archive:
-  date_format: YYYY年M月
+  date_format_for_monthly: YYYY年M月
+  date_format_for_yearly: YYYY年
 
 # Site search
 search:

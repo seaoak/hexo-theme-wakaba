@@ -4,11 +4,12 @@
 //===========================================================================
 // helpers for helpers
 
-function makeListForArchives(posts, isMonthly, dateFormat, dirPrefix) {
+function makeListForArchives(posts, isMonthly, dateFormatForMonthly, dateFormatForYearly, dirPrefix) {
+    const fmtForLabel = isMonthly ? dateFormatForMonthly : dateFormatForYearly;
     const fmtForPath = isMonthly ? 'YYYY/MM' : 'YYYY';
     const func = (acc, post) => {
         const date = post.date;
-        const label = date.format(dateFormat);
+        const label = date.format(fmtForLabel);
         const path = dirPrefix + '/' + date.format(fmtForPath) + '/';
         if (!acc[label]) acc[label] = {label, path, date, posts: []}; // "date" is a representative value
         acc[label].posts.push(post);
@@ -40,8 +41,8 @@ function getCopyrightYear(posts) {
     return `${start}`;
 }
 
-function getLinksForArchives(posts, isMonthly, dateFormat, dirPrefix) {
-    const list = makeListForArchives(posts, isMonthly, dateFormat, dirPrefix);
+function getLinksForArchives(posts, isMonthly, dateFormatForMonthly, dateFormatForYearly, dirPrefix) {
+    const list = makeListForArchives(posts, isMonthly, dateFormatForMonthly, dateFormatForYearly, dirPrefix);
     return list;
 }
 

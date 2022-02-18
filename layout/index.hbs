@@ -3,7 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    {{#if page.permalink}}
+    <title>{{page.title}} - {{config.title}}</title>
+    {{else}}{{#if page.archive}}
+    {{#if page.month}}
+    <title>Archives ({{date page.posts.data.[0].date theme.archive.date_format_for_monthly}}) - {{config.title}}</title>
+    {{else}}{{#if page.year}}
+    <title>Archives ({{date page.posts.data.[0].date theme.archive.date_format_for_yearly}}) - {{config.title}}</title>
+    {{else}}
+    <title>Archives - {{config.title}}</title>
+    {{/if}}{{/if}}
+    {{else}}{{#if page.category}}
+    <title>Category: {{page.category}} - {{config.title}}</title>
+    {{else}}{{#if page.tag}}
+    <title>Tag: {{page.tag}} - {{config.title}}</title>
+    {{else}}{{!-- index page --}}
     <title>{{config.title}}</title>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+    {{/if}}
     <meta name="author" content="{{{config.author}}}">
     {{#if config.description}}
     <meta name="description" content="{{{config.description}}}">
@@ -99,7 +118,7 @@
         <header>
           <h1><a href="./">{{> @partial-block}}</a></h1>
         </header>
-        {{#each (getLinksForArchives page.posts.data false "YYYY" config.archive_dir) }}
+        {{#each (getLinksForArchives page.posts.data false "" "YYYY" config.archive_dir) }}
         <h2>{{this.label}}</h2>
         <ol>
           {{#each this.posts}}
@@ -142,10 +161,12 @@
       {{!-- ================================================== --}}
       {{#if page.posts}}{{#if page.archive}}
       {{#if page.month}}
-      {{#> indexPage}}Archives ({{date page.posts.data.[0].date theme.archive.date_format}}){{/indexPage}}
+      {{#> indexPage}}Archives ({{date page.posts.data.[0].date theme.archive.date_format_for_monthly}}){{/indexPage}}
+      {{else}}{{#if page.year}}
+      {{#> indexPage}}Archives ({{date page.posts.data.[0].date theme.archive.date_format_for_yearly}}){{/indexPage}}
       {{else}}
       {{#> indexPage}}Archives{{/indexPage}}
-      {{/if}}
+      {{/if}}{{/if}}
       {{/if}}{{/if}}
       {{!-- ================================================== --}}
       {{#if page.posts}}{{#if page.tag}}
@@ -201,7 +222,7 @@
       <ul>
         <li><a href="/{{{config.archive_dir}}}/">All posts</a></li>
         {{#each site.posts}}
-        {{#each (getLinksForArchives this ../config.archive_generator.monthly ../theme.archive.date_format ../config.archive_dir) }}
+        {{#each (getLinksForArchives this ../config.archive_generator.monthly ../theme.archive.date_format_for_monthly ../theme.archive.date_format_for_yearly ../config.archive_dir) }}
         {{log this.count}}
         <li><a href="/{{{this.path}}}">{{this.label}}{{#if ../../theme.sidebar.show_count.archive}} ({{this.count}}){{/if}}</a></li>
         {{/each}}
