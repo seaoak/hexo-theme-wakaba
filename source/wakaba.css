@@ -282,6 +282,33 @@ body > nav #global_nav_tags {
     max-width: min(100%, var(--default-width-of-sidebar));
 }
 
+.widget_search form {
+    display: flex;
+}
+
+.widget_search input {
+    width: 100%;
+    padding: 4px;
+    border: 1px #699 solid;
+}
+
+.widget_search button {
+    width: calc(16px + 4px + 4px + 1px + 1px);
+    margin-left: 4px;
+    padding: 4px;
+    border: 1px #699 dotted;
+    border-radius: 15%;
+    box-shadow: 1px 1px 2px #699;
+    background-color: white;
+    cursor: pointer;
+}
+
+.widget_search p {
+    margin-top: 8px;
+    margin-left: 4px;
+    font-size: 9px;
+}
+
 .widget_links li::before,
 .widget_intro li::before {
     /* https://unicode-table.com/en/sets/arrow-symbols/ */

@@ -202,6 +202,11 @@
     {{#*inline "search"}}
     <section class="widget_search">
       <h1>Search</h1>
+      <form action="https://duckduckgo.com/" method="GET">
+        <input name="q" type="search" placeholder="Search in this blog..." aria-label="Search in this blog" required>
+        <button type="submit" aria-label="Submit">&#128269;</button><!-- "Left-Pointing Magnifying Glass Emoji" https://unicode-table.com/en/1F50D/ -->
+      </form>
+      <p>powered by <a href="https://duckduckgo.com">DuckDuckGo</a></p>
     </section>
     {{/inline}}
     {{#*inline "recent_posts"}}
@@ -318,4 +323,5 @@
   <footer id="global_footer">
     <p class="copyright">Copyright &copy; {{getCopyrightYear site.posts}} <a href="/">{{config.author}}</a></p>
   </footer>
+  <script src="/wakaba.js" async></script>
 </body></html>
