@@ -8,7 +8,7 @@
     }
 
     function initialize() {
-        const targets = Array.from(document.querySelectorAll('.widget_search form'));
+        const targets = Array.from(document.querySelectorAll('.search_form'));
         targets.forEach(x => x.addEventListener('submit', handlerForSubmitSearch));
     }
 

@@ -202,9 +202,9 @@
     {{#*inline "search"}}
     <section class="widget_search">
       <h1>Search</h1>
-      <form action="https://duckduckgo.com/" method="GET">
-        <input name="q" type="search" placeholder="Search in this blog..." aria-label="Search in this blog" required>
+      <form class="search_form" action="https://duckduckgo.com/" method="GET">
         <button type="submit" aria-label="Submit">&#128269;</button><!-- "Left-Pointing Magnifying Glass Emoji" https://unicode-table.com/en/1F50D/ -->
+        <input name="q" type="search" placeholder="Search in this blog..." aria-label="Search in this blog" required>
       </form>
       <p>powered by <a href="https://duckduckgo.com">DuckDuckGo</a></p>
     </section>
@@ -313,6 +313,10 @@
         {{/if}}
         {{/each}}
       </ul>
+      <form class="search_form" action="https://duckduckgo.com/" method="GET">
+        <button type="submit" aria-label="Submit">&#128269;</button><!-- "Left-Pointing Magnifying Glass Emoji" https://unicode-table.com/en/1F50D/ -->
+        <input name="q" type="search" placeholder="Search in this blog..." aria-label="Search in this blog" required>
+      </form>
       <ul id="global_nav_tags" class="post_tags">
         {{#each site.tags.data}}
         <li><a href="/{{{this.path}}}">{{this.name}}</a></li>
