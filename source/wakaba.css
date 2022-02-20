@@ -226,8 +226,10 @@ body > nav .global_nav_title {
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #224444;
     text-shadow: 1px 1px 2px #cee;
-    /* visibility: hidden; */
-    transition: all 0.25s ease-in-out;
+    z-index: 15;
+    visibility: hidden;
+    opacity: 0; /* invisible */
+    transition: all 0.5s ease-in-out;
 }
 
 body > nav .global_nav_title a {
