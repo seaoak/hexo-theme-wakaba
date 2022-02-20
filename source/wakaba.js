@@ -14,20 +14,20 @@
         if (!aim) return () => {}; // NOP
         const threshold = aim.offsetTop + aim.offsetHeight * 0.3;
 
-        let currentValue = null;
+        let previous = undefined;
         let timeoutId = null;
         return (_event) => {
-            const nextValue = window.scrollY > threshold ? 'visible' : 'hidden';
-            if (!currentValue || nextValue !== currentValue) {
-                currentValue = nextValue;
-                if (nextValue === 'visible') target.style.visibility = 'visible';
-                target.style.opacity = nextValue === 'visible' ? 1.0 : 0.0; // start animation
-                if (timeoutId) clearTimeout(timeoutId);
+            const isVisible = window.scrollY > threshold;
+            if (isVisible === previous) return;
+            previous = isVisible;
+            if (isVisible) target.style.visibility = 'visible';
+            target.style.opacity = isVisible ? 1.0 : 0.0; // start animation
+            if (timeoutId) clearTimeout(timeoutId);
+            if (isVisible) return;
+            timeoutId = setTimeout(() => {
                 timeoutId = null;
-                if (nextValue === 'hidden') {
-                    timeoutId = setTimeout(() => target.style.visibility = nextValue, 500);
-                }
-            }
+                target.style.visibility = 'hidden';
+            }, 500);
         };
     }
 
@@ -63,7 +63,7 @@
         const targets = Array.from(document.querySelectorAll('.search_form'));
         targets.forEach(x => x.addEventListener('submit', handlerForSubmitSearch));
 
-        window.addEventListener('scroll', toDeferredHandler(makeHandlerForScroll(), 500));
+        window.addEventListener('scroll', makeHandlerForScroll());
     }
 
     if (document.readyState === 'loading') {
