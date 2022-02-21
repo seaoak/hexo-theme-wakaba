@@ -7,10 +7,9 @@ The features are:
 - modern (IE11 is no longer supported)
 - responsive
 - semantic
-- valid
 - lightweight
 - [WAI-ARIA (Accessibility)](https://www.w3.org/TR/using-aria/)
-- CSS3 (FlexBox, Responsive Image, etc)
+- CSS3
 - HTML5.2
 
 "Wakaba" is designed for tech blogs, such as that mainly have texts and code blocks, not for photo galleries.
@@ -24,8 +23,6 @@ The features are:
 
 - Google Fonts   
   https://fonts.google.com
-- Icon fonts of Font Awesome CDN   
-  https://cdn.fontawesome.com
 
 
 ## License
