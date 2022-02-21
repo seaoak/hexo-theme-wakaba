@@ -370,6 +370,11 @@ body > footer {
     box-shadow: inset 0 -2px 4px var(--base-color);
 }
 
+body > footer .powered_by {
+    margin-top: 8px;
+    font-size: 9px;
+}
+
 /***************************************************************************/
 /* Archive / Category / Tag page */
 main .archive_page h2 { /* YEAR label */
