@@ -7,47 +7,20 @@ css_files:
 # Favicon file
 favicon: favicon.png ## "path/to/file" or URL
 
-# Background
-background:
-  color:
-  img_small: img/background.jpg
-  img_middle: img/background.jpg
-  img_large: img/background.jpg
-  opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
-
-# Banner
-banner:
-  color:
-  img_small: img/background.jpg
-  img_middle: img/background.jpg
-  img_large: img/background.jpg
-  opacity: ## a decimal between 0.0 (transparent) and 1.0 (opaque)
-
 # Global navigation
 nav:
   - title: Home
     path: /
-    icon: fa-home
-  - title: About
-    path: /about/
-    icon: fa-user
   - title: Archive
     path: /archives/
-    icon: fa-fei
 
 # Archive page / Archive widget
 archive:
   date_format_for_monthly: YYYY年M月
   date_format_for_yearly: YYYY年
 
-# Site search
-search:
-  url_template: https://search.example.com/?domain=`domain`&path=`root`&keywords=`text`
-  enable_search_box: true
-
 # Sidebar
 sidebar:
-  position: right ## right/left/bottom/top/none
   widgets:
     - intro
     - search
@@ -94,15 +67,3 @@ notice:
     and code samples are licensed under
     <a href="https://directory.fsf.org/wiki/License:X11">the MIT License (the X11 License)</a>.
     </p>
-
-# Feed
-feed:
-  type: atom
-  path: atom.xml
-
-# Sitemap
-sitemap:
-  path: sitemap.xml
-
-# Miscellaneous
-google_analytics:
