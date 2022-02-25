@@ -1,6 +1,25 @@
 (function() {
     'use strict';
 
+    // A supplement for Prism.js
+    // Highlight command prompt in code block
+    function highlightCommandPrompt() {
+        const table = {
+            'bash': '[$#]',
+            'cmd': '&gt;',
+            'powershell': 'PS&gt;',
+        };
+        Object.entries(table).forEach(([name, pattern]) => {
+            const regexp = new RegExp(`^(${pattern})(( )|(?=\\r?\$|<span aria-hidden="true" class="line-numbers-rows">))`, 'mg');
+            const elements = document.querySelectorAll(`pre code.language-${name}`);
+            elements.forEach(elem => {
+                const html = elem.innerHTML;
+                const modified = html.replace(regexp, '<span class="token prompt">$1$3</span>');
+                elem.innerHTML = modified;
+            });
+        });
+    }
+
     function handlerForSubmitSearch(_event) {
         // _event.preventDefault(); // for debug
         const elements = Array.from(this.querySelectorAll('input[name="q"]'));
@@ -60,6 +79,8 @@
     }
 
     function initialize() {
+        highlightCommandPrompt();
+
         const targets = Array.from(document.querySelectorAll('.search_form'));
         targets.forEach(x => x.addEventListener('submit', handlerForSubmitSearch));
 
