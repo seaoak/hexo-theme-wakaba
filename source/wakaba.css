@@ -666,6 +666,7 @@ main article .post_content pre code.hljs {
 
 main article .post_content pre[class*=language-] code {
     display: block;
+    text-shadow: none; /* overwrite prism.js */
 }
 
 main article .post_content pre[class*=language-] {
