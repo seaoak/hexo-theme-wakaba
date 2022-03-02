@@ -38,7 +38,7 @@ body {
 }
 
 body pre, body code, body kbd {
-    font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace;
+    font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace !important;
 }
 
 @font-face {
