@@ -5,16 +5,16 @@
     // Highlight command prompt in code block
     function highlightCommandPrompt() {
         const table = {
-            'bash': '[$#]',
-            'cmd': '&gt;',
-            'powershell': 'PS&gt;',
+            'bash-prompt': '[$#]',
+            'cmd-prompt': '&gt;',
+            'powershell-prompt': 'PS&gt;',
         };
         Object.entries(table).forEach(([name, pattern]) => {
-            const regexp = new RegExp(`^(${pattern})(( )|(?=\\r?\$|<span aria-hidden="true" class="line-numbers-rows">))`, 'mg');
+            const regexp = new RegExp(`^(${pattern})(( )([^\\r\\n]*))?(?=\\r?\$|<span aria-hidden="true" class="line-numbers-rows">)`, 'mg');
             const elements = document.querySelectorAll(`pre code.language-${name}`);
             elements.forEach(elem => {
                 const html = elem.innerHTML;
-                const modified = html.replace(regexp, '<span class="token prompt">$1$3</span>');
+                const modified = html.replace(regexp, '<span class="token prompt">$1$3</span><span class="token command-line">$4</span>');
                 elem.innerHTML = modified;
             });
         });

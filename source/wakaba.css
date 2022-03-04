@@ -686,13 +686,20 @@ main article .post_content pre[class*=language-].line-numbers {
     padding: 0 0 0 3.8em; /* overwrite prism.js */
 }
 
-main article .post_content pre[class*=language-] code.language-bash .token.prompt,
-main article .post_content pre[class*=language-] code.language-cmd .token.prompt,
-main article .post_content pre[class*=language-] code.language-powershell .token.prompt {
+main article .post_content pre[class*=language-] code.language-bash-prompt .token.prompt,
+main article .post_content pre[class*=language-] code.language-cmd-prompt .token.prompt,
+main article .post_content pre[class*=language-] code.language-powershell-prompt .token.prompt {
     /* customize Prism.js with "wakaba.js" */
     font-weight: bold;
     color: red;
     user-select: none; /* prevent user from selecting string */
+}
+
+main article .post_content pre[class*=language-] code.language-bash-prompt .token.command-line,
+main article .post_content pre[class*=language-] code.language-cmd-prompt .token.command-line,
+main article .post_content pre[class*=language-] code.language-powershell-prompt .token.command-line {
+    /* customize Prism.js with "wakaba.js" */
+    color: brown;
 }
 
 main article p kbd,
