@@ -30,7 +30,7 @@ body {
         https://willcloud.jp/knowhow/font-family/
         https://ics.media/entry/14087/
     */
-    font-family: "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Modified Yu Gothic", "Meiryo", sans-serif;
+    font-family: "Modified Yu Gothic", "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Modified Yu Gothic", "Meiryo", sans-serif;
     font-feature-settings: "pwid" 1; /* enable proportional metrics of OpenType font */
     font-size: 16px;
     color: Black;
