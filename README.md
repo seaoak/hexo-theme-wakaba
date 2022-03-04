@@ -8,7 +8,6 @@ The features are:
 - responsive
 - semantic
 - lightweight
-- [WAI-ARIA (Accessibility)](https://www.w3.org/TR/using-aria/)
 - CSS3
 - HTML5.2
 
