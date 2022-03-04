@@ -30,8 +30,7 @@ body {
         https://willcloud.jp/knowhow/font-family/
         https://ics.media/entry/14087/
     */
-    font-family: "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-    font-weight: 500; /* workaround for "Yu Gothic" */
+    font-family: "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Modified Yu Gothic", "Meiryo", sans-serif;
     font-feature-settings: "pwid" 1; /* enable proportional metrics of OpenType font */
     font-size: 16px;
     color: Black;
@@ -46,6 +45,10 @@ body {
 body pre, body code, body kbd {
     font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace !important;
 }
+
+ /* workaround for "Yu Gothic" (avoid "Yu Gothic Regular" in Google Chrome on Windows) */
+@font-face { font-family: "Modified Yu Gothic"; src: local("Yu Gothic Medium"), local("YuGothic-Medium"); }
+@font-face { font-family: "Modified Yu Gothic"; src: local("Yu Gothic Bold"),   local("YuGothic-Bold");   font-weight: bold; }
 
 @font-face {
     /*
