@@ -37,6 +37,12 @@ body {
     color: Black;
 }
 
+@media only screen and (max-width: 869px) {
+    body {
+        font-size: 14px;
+    }
+}
+
 body pre, body code, body kbd {
     font-family: "SFMono-Regular", "Consolas", "Courier New", "Meiryo", monospace !important;
 }
