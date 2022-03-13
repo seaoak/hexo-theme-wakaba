@@ -704,7 +704,7 @@ main article .post_content pre[class*=language-] code.language-powershell-prompt
 
 main article p kbd,
 main article p code {
-    padding: 4px;
+    padding: 1px 4px;
     background-color: #e0f0f0;
 }
 
