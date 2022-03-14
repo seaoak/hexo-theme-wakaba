@@ -3,6 +3,7 @@
     --base-secondary-color: #9cc;
     --base-surface-color: #f9f9f9;
     --base-border-color: #699;
+    --base-figure-color: #f0f0f099;
     --base-label-color: #f0f0f0;
     --base-label-active-color: #ffecec;
     --base-ui-color: #ffffffcc;
@@ -675,7 +676,7 @@ main article .post_content > pre,
 main article .post_content figure {
     margin-bottom: 16px;
     border: 1px var(--base-border-color) dotted;
-    background-color: #f0f0f0;
+    background-color: var(--base-figure-color);
     font-size: 12px;
     overflow-x: auto;
 }
