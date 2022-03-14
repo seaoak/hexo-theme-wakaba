@@ -5,7 +5,7 @@
     --base-border-color: #699;
     --base-figure-color: #f0f0f099;
     --base-label-color: #f0f0f0;
-    --base-label-active-color: #ffecec;
+    --base-active-color: #ffecec;
     --base-ui-color: #ffffffcc;
     --base-code-color: #e0f0f0;
     --font-color-default: #001018;
@@ -467,7 +467,7 @@ main .archive_page .banner h3 a::before { /* circle mark on the line */
 
 main .archive_page .banner h3 a:hover::before,
 main .archive_page .banner h3 a:active::before {
-    background-color: var(--base-label-active-color);
+    background-color: var(--base-active-color);
     box-shadow: inset 0 0 4px var(--base-surface-color);
 }
 
@@ -579,7 +579,7 @@ body .post_tags a {
 body .post_tags a:hover,
 body .post_tags a:active {
     text-decoration: none;
-    background-color: var(--base-label-active-color);
+    background-color: var(--base-active-color);
 }
 
 /*----------*/
