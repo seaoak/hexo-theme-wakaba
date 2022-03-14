@@ -5,6 +5,9 @@
     --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
+    --shadow-color-default: #33666699;
+    --shadow-color-light: #9cc;
+    --shadow-color-base: #cee;
     --default-width-of-sidebar: 256px;
 }
 
@@ -153,7 +156,7 @@ body {
     padding: 4px;
     border: 1px var(--base-border-color) dotted;
     border-radius: 15%;
-    box-shadow: 1px 1px 2px #333;
+    box-shadow: 1px 1px 2px var(--shadow-color-default);
     background-color: white;
     cursor: pointer;
 }
@@ -191,7 +194,6 @@ body > nav > #menu_button {
     z-index: 18;
     border-radius: 15%;
     background-color: #f0fcfc;
-    box-shadow: 0 0 4px #cfe;
     cursor: pointer;
 }
 
@@ -240,7 +242,7 @@ body > nav .global_nav_title {
     font-weight: bold;
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
     color: #224444;
-    text-shadow: 1px 1px 2px #cee;
+    text-shadow: 1px 1px 2px var(--shadow-color-default);
     z-index: 15;
     visibility: hidden;
     opacity: 0; /* invisible */
@@ -276,7 +278,7 @@ body > nav #global_nav_links a {
     padding: 8px 4px;
     margin: 4px;
     color: var(--font-color-default);
-    text-shadow: 1px 1px 2px #336666;
+    text-shadow: 1px 1px 2px var(--shadow-color-default);
 }
 
 body > nav #global_nav_links a:hover,
@@ -334,7 +336,7 @@ body > nav #global_nav_tags {
     padding: 16px;
     background-color: #f9f9f9;
     border-radius: 16px;
-    box-shadow: 2px 2px 4px #cee, -1px -1px 2px #cee;
+    box-shadow: 2px 2px 4px var(--shadow-color-base), -1px -1px 2px var(--shadow-color-base);
     font-size: 14px;
 }
 
@@ -400,7 +402,7 @@ main .archive_page h2 { /* YEAR label */
     background-color: #99cccc;
     box-shadow: inset 0 -2px 4px var(--base-color);
     font-size: 24px;
-    text-shadow: 1px 1px 2px #336666;
+    text-shadow: 1px 1px 2px var(--shadow-color-default);
     line-height: 60px;
     text-align: center;
 }
@@ -424,7 +426,7 @@ main .archive_page .banner {
 
 main .archive_page .banner h3 {
     padding-top: 4px;
-    text-shadow: 1px 1px 2px #9cc;
+    text-shadow: 1px 1px 2px var(--shadow-color-light);
 }
 
 main .archive_page .banner h3 a {
@@ -470,7 +472,7 @@ main article {
     padding: 16px;
     background-color: #f9f9f9;
     border-radius: 16px;
-    box-shadow: 2px 2px 4px #cee, -1px -1px 2px #cee;
+    box-shadow: 2px 2px 4px var(--shadow-color-base), -1px -1px 2px var(--shadow-color-base);
 }
 
 main article > header h1 {
@@ -481,7 +483,7 @@ main article > header h1 {
 main article > header h1 a {
     font-size: 32px;
     color: #336;
-    text-shadow: 1px 1px 2px #9cc;
+    text-shadow: 1px 1px 2px var(--shadow-color-light);
 }
 
 main article > header h1 a:hover,
@@ -558,7 +560,7 @@ body .post_tags a {
     display: block;
     padding: 4px 8px;
     color: #336;
-    text-shadow: 1px 1px 2px #9cc;
+    text-shadow: 1px 1px 2px var(--shadow-color-light);
 }
 
 body .post_tags a:hover,
