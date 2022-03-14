@@ -1,5 +1,6 @@
 :root {
     --base-color:  #ccffee;
+    --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
     --default-width-of-sidebar: 256px;
@@ -34,7 +35,7 @@ body {
     font-family: "Modified Yu Gothic", "Verdana", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Modified Yu Gothic", "Meiryo", sans-serif;
     font-feature-settings: "pwid" 1; /* enable proportional metrics of OpenType font */
     font-size: 16px;
-    color: Black;
+    color: var(--font-color-default);
 }
 
 @media only screen and (max-width: 869px) {
@@ -245,12 +246,12 @@ body > nav .global_nav_title {
 }
 
 body > nav .global_nav_title a {
-    color: black;
+    color: var(--font-color-default);
 }
 
 body > nav .global_nav_title a:hover,
 body > nav .global_nav_title a:active {
-    color: black;
+    color: var(--font-color-default);
     text-decoration: none;
 }
 
@@ -272,7 +273,7 @@ body > nav #global_nav_links li {
 body > nav #global_nav_links a {
     padding: 8px 4px;
     margin: 4px;
-    color: black;
+    color: var(--font-color-default);
     text-shadow: 1px 1px 2px #336666;
 }
 
