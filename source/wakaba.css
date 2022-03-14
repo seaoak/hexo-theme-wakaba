@@ -14,6 +14,7 @@
     --font-color-title: #244;
     --font-color-subtitle: #366;
     --font-color-label: #336;
+    --font-color-prompt: red;
     --shadow-color-default: #33666699;
     --shadow-color-light: #9cc;
     --shadow-color-base: #cee;
@@ -710,7 +711,7 @@ main article .post_content pre[class*=language-] code.language-cmd-prompt .token
 main article .post_content pre[class*=language-] code.language-powershell-prompt .token.prompt {
     /* customize Prism.js with "wakaba.js" */
     font-weight: bold;
-    color: red;
+    color: var(--font-color-prompt);
     user-select: none; /* prevent user from selecting string */
 }
 
