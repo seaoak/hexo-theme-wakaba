@@ -12,6 +12,7 @@
     --font-color-active: red;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
+    --font-color-weak: #666;
     --font-color-title: #244;
     --font-color-subtitle: #366;
     --font-color-label: #336;
@@ -495,7 +496,7 @@ main article > header h1 {
 
 main article > header h1 a {
     font-size: 32px;
-    color: #336;
+    color: inherit;
     text-shadow: 1px 1px 2px var(--shadow-color-light);
 }
 
@@ -508,7 +509,7 @@ main article > header div {
     margin-top: 4px;
     margin-right: 8px;
     text-align: right;
-    color: #666;
+    color: var(--font-color-weak);
     font-weight: bold;
 }
 
