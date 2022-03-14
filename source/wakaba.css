@@ -5,9 +5,12 @@
     --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
+    --font-color-title: #244;
+    --font-color-subtitle: #366;
     --shadow-color-default: #33666699;
     --shadow-color-light: #9cc;
     --shadow-color-base: #cee;
+    --shadow-color-title: #fff;
     --default-width-of-sidebar: 256px;
 }
 
@@ -241,7 +244,7 @@ body > nav .global_nav_title {
     font-size: 32px;
     font-weight: bold;
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
-    color: #224444;
+    color: var(--font-color-title);
     text-shadow: 1px 1px 2px var(--shadow-color-default);
     z-index: 15;
     visibility: hidden;
@@ -250,12 +253,12 @@ body > nav .global_nav_title {
 }
 
 body > nav .global_nav_title a {
-    color: var(--font-color-default);
+    color: inherit;
 }
 
 body > nav .global_nav_title a:hover,
 body > nav .global_nav_title a:active {
-    color: var(--font-color-default);
+    color: inherit;
     text-decoration: none;
 }
 
@@ -311,8 +314,8 @@ body > nav #global_nav_tags {
 #container > header h1 a {
     font-size: clamp(16px, 16vw, calc(96px + 32px));
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
-    color: #224444;
-    text-shadow: 1px 1px 2px #fff;
+    color: var(--font-color-title);
+    text-shadow: 1px 1px 2px var(--shadow-color-title);
 }
 
 #container > header h1 a:hover,
@@ -325,8 +328,8 @@ body > nav #global_nav_tags {
     padding-left: 16px;
     font-size: clamp(16px, 5vw, 36px);
     font-family: Caveat, Georgia, 'Times New Roman', Times, serif;
-    color: #336666;
-    text-shadow: 1px 1px 2px #fff;
+    color: var(--font-color-subtitle);
+    text-shadow: 1px 1px 2px var(--shadow-color-title);
 }
 
 /***************************************************************************/
