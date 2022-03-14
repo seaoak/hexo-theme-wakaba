@@ -8,6 +8,7 @@
     --base-ui-color: #ffffffcc;
     --base-code-color: #e0f0f0;
     --font-color-default: #001018;
+    --font-color-active: red;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
     --font-color-title: #244;
@@ -294,7 +295,7 @@ body > nav #global_nav_links a {
 body > nav #global_nav_links a:hover,
 body > nav #global_nav_links a:active {
     text-decoration: none;
-    color: red;
+    color: var(--font-color-active);
 }
 
 body > nav .search_form {
@@ -446,7 +447,7 @@ main .archive_page .banner h3 a {
 main .archive_page .banner h3 a:hover,
 main .archive_page .banner h3 a:active {
     text-decoration: none;
-    color: red;
+    color: var(--font-color-active);
 }
 
 main .archive_page .banner h3 a::before { /* circle mark on the line */
@@ -587,7 +588,7 @@ body a {
 
 body a:hover,
 body a:active {
-    color: Red;
+    color: var(--font-color-active);
     text-decoration: underline;
 }
 
