@@ -461,14 +461,14 @@ main .archive_page .banner h3 a::before { /* circle mark on the line */
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--base-surface-color);
     border: 3px var(--base-border-color) dotted;
 }
 
 main .archive_page .banner h3 a:hover::before,
 main .archive_page .banner h3 a:active::before {
-    background-color: #ffcccc;
-    box-shadow: inset 0 0 4px #fff;
+    background-color: var(--base-label-active-color);
+    box-shadow: inset 0 0 4px var(--base-surface-color);
 }
 
 main .archive_page .banner .post_date {
