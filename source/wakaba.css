@@ -1,5 +1,6 @@
 :root {
     --base-color:  #ccffee;
+    --base-secondary-color: #9cc;
     --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
@@ -165,7 +166,7 @@ body > nav {
     min-height: 36px;
     padding: 0 16px 8px 0;
     z-index: 10;
-    background-color: #99cccc;
+    background-color: var(--base-secondary-color);
     box-shadow: inset 0 -2px 4px var(--base-color);
     text-align: right;
 }
@@ -201,7 +202,7 @@ body > nav > #menu_button span::after {
     position: absolute;
     height: 3px;
     width: 24px;
-    background-color: #699;
+    background-color: var(--base-secondary-color);
     transition: all 0.25s ease-in-out;
 }
 
@@ -378,7 +379,7 @@ body > footer {
     margin-top: 32px;
     padding: 32px;
     text-align: right;
-    background-color: #99cccc;
+    background-color: var(--base-secondary-color);
     box-shadow: inset 0 -2px 4px var(--base-color);
 }
 
