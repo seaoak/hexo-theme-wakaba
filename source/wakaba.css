@@ -1,6 +1,7 @@
 :root {
     --base-color:  #ccffee;
     --base-secondary-color: #9cc;
+    --base-border-color: #699;
     --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
@@ -144,13 +145,13 @@ body {
 .search_form input {
     width: 100%;
     padding: 4px;
-    border: 1px #699 solid;
+    border: 1px var(--base-border-color) solid;
 }
 
 .search_form button {
     width: calc(16px + 4px + 4px + 1px + 1px);
     padding: 4px;
-    border: 1px #699 dotted;
+    border: 1px var(--base-border-color) dotted;
     border-radius: 15%;
     box-shadow: 1px 1px 2px #333;
     background-color: white;
@@ -370,7 +371,7 @@ body > nav #global_nav_tags {
 .widget_intro li::before {
     /* https://unicode-table.com/en/sets/arrow-symbols/ */
     content: "\27A4  ";
-    color: #699;
+    color: var(--base-border-color);
 }
 
 /***************************************************************************/
@@ -408,7 +409,7 @@ main .archive_page > ol {
     margin-left: calc(64px / 2 + 16px);
     padding-top: 1px; /* hacky (I don't know why this works well) */
     padding-bottom: 16px;
-    border-left: 3px #699 dotted;
+    border-left: 3px var(--base-border-color) dotted;
 }
 
 main .archive_page .banner {
@@ -446,7 +447,7 @@ main .archive_page .banner h3 a::before { /* circle mark on the line */
     height: 12px;
     border-radius: 50%;
     background-color: #fff;
-    border: 3px #699 dotted;
+    border: 3px var(--base-border-color) dotted;
 }
 
 main .archive_page .banner h3 a:hover::before,
@@ -474,7 +475,7 @@ main article {
 
 main article > header h1 {
     padding-bottom: 4px;
-    border-bottom: 3px #9cc dotted;
+    border-bottom: 3px var(--base-border-color) dotted;
 }
 
 main article > header h1 a {
@@ -531,7 +532,7 @@ main article > footer {
     margin-top: 16px;
     margin-bottom: 16px;
     padding-top: 8px;
-    border-top: 3px #9cc dotted;
+    border-top: 3px var(--base-border-color) dotted;
 }
 
 /***************************************************************************/
@@ -545,10 +546,10 @@ body .post_tags {
 body .post_tags li {
     display: inline;
     margin-left: 8px;
-    border-top: 1px #699 solid;
-    border-right: 1px #699 solid;
-    border-bottom: 1px #699 solid;
-    border-left: 5px #699 solid;
+    border-top: 1px var(--base-border-color) solid;
+    border-right: 1px var(--base-border-color) solid;
+    border-bottom: 1px var(--base-border-color) solid;
+    border-left: 5px var(--base-border-color) solid;
     background-color: #f0f0f0;
     list-style: none;
 }
@@ -593,8 +594,8 @@ main article .post_content h2 {
     margin-bottom: 16px;
     padding-top: 8px;
     padding-left: 16px;
-    border-top: 3px #9cc dotted;
-    border-left: 9px #9cc dotted;
+    border-top: 3px var(--base-border-color) dotted;
+    border-left: 9px var(--base-border-color) dotted;
     font-size: 24px;
     font-weight: bold;
 }
@@ -649,7 +650,7 @@ main article .post_content dl {
 main article .post_content img {
     max-width: calc(100% - 1px - 1px);
     margin-bottom: 16px;
-    border: 1px #699 dotted;
+    border: 1px var(--base-border-color) dotted;
 }
 
 main article .post_content > pre {
@@ -659,7 +660,7 @@ main article .post_content > pre {
 main article .post_content > pre,
 main article .post_content figure {
     margin-bottom: 16px;
-    border: 1px #699 dotted;
+    border: 1px var(--base-border-color) dotted;
     background-color: #f0f0f0;
     font-size: 12px;
     overflow-x: auto;
@@ -668,9 +669,9 @@ main article .post_content figure {
 main .highlight .gutter { /* line numbers for highlight.js */
     padding-right: 4px;
     padding-left: 4px;
-    border-right: 1px #699 dotted;
+    border-right: 1px var(--base-border-color) dotted;
     text-align: right;
-    color: #699;
+    color: var(--base-border-color);
 }
 
 main article .post_content pre code.hljs {
@@ -717,7 +718,7 @@ main article .post_content blockquote {
     margin-bottom: 16px;
     margin-left: 16px;
     padding: 8px;
-    border-left: 3px double #699;
+    border-left: 3px double var(--base-border-color);
     color: #666;
 }
 
@@ -755,6 +756,6 @@ main article .post_content blockquote footer strong::after {
     flex-shrink: 0;
     max-width: 5rem;
     padding: 0 16px;
-    border-left: 3px #699 solid;
-    border-right: 3px #699 solid;
+    border-left: 3px var(--base-border-color) solid;
+    border-right: 3px var(--base-border-color) solid;
 }
