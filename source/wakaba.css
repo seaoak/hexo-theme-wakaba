@@ -8,6 +8,7 @@
     --font-color-emphasis: brown;
     --font-color-title: #244;
     --font-color-subtitle: #366;
+    --font-color-post-tag: #336;
     --shadow-color-default: #33666699;
     --shadow-color-light: #9cc;
     --shadow-color-base: #cee;
@@ -563,7 +564,7 @@ body .post_tags li {
 body .post_tags a {
     display: block;
     padding: 4px 8px;
-    color: #336;
+    color: var(--font-color-post-tag);
     text-shadow: 1px 1px 2px var(--shadow-color-light);
 }
 
