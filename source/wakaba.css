@@ -5,6 +5,7 @@
     --base-border-color: #699;
     --base-label-color: #f0f0f0;
     --base-label-active-color: #ffecec;
+    --base-code-color: #e0f0f0;
     --font-color-default: #001018;
     --font-color-hyperlink: #069;
     --font-color-emphasis: brown;
@@ -720,7 +721,7 @@ main article .post_content pre[class*=language-] code.language-powershell-prompt
 main article p kbd,
 main article p code {
     padding: 1px 4px;
-    background-color: #e0f0f0;
+    background-color: var(--base-code-color);
 }
 
 main article .post_content blockquote {
