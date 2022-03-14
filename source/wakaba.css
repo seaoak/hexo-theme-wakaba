@@ -1,6 +1,7 @@
 :root {
     --base-color:  #ccffee;
     --font-color-hyperlink: #069;
+    --font-color-emphasis: brown;
     --default-width-of-sidebar: 256px;
 }
 
@@ -62,6 +63,7 @@ body pre, body code, body kbd {
 
 body b, body strong {
     font-weight: bold;
+    color: var(--font-color-emphasis);
 }
 
 body em, body i {
@@ -700,7 +702,7 @@ main article .post_content pre[class*=language-] code.language-bash-prompt .toke
 main article .post_content pre[class*=language-] code.language-cmd-prompt .token.command-line,
 main article .post_content pre[class*=language-] code.language-powershell-prompt .token.command-line {
     /* customize Prism.js with "wakaba.js" */
-    color: brown;
+    color: var(--font-color-emphasis);
 }
 
 main article p kbd,
