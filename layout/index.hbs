@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     {{#if page.permalink}}
     <title>{{page.title}} - {{config.title}}</title>
     {{else}}{{#if page.archive}}
@@ -23,6 +24,7 @@
     {{/if}}
     {{/if}}
     {{/if}}
+
     <meta name="author" content="{{{config.author}}}">
     {{#if config.description}}
     <meta name="description" content="{{{config.description}}}">
