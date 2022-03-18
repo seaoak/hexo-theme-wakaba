@@ -25,6 +25,25 @@
     {{/if}}
     {{/if}}
 
+    {{#if page.permalink}}
+    {{!-- no "noindex" for each post --}}
+    {{else}}{{#if page.archive}}
+    <meta name="robots" content="noindex">
+    {{else}}{{#if page.category}}
+    <meta name="robots" content="noindex">
+    {{else}}{{#if page.tag}}
+    <meta name="robots" content="noindex">
+    {{else}}{{!-- index page --}}
+    {{#if page.prev}}
+    <meta name="robots" content="noindex">
+    {{else}}
+    {{!-- no "noindex" for top page --}}
+    {{/if}}
+    {{/if}}
+    {{/if}}
+    {{/if}}
+    {{/if}}
+
     <meta name="author" content="{{{config.author}}}">
     {{#if config.description}}
     <meta name="description" content="{{{config.description}}}">
