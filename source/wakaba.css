@@ -724,8 +724,7 @@ main article .post_content pre[class*=language-] code.language-powershell-prompt
     color: var(--font-color-emphasis);
 }
 
-main article p kbd,
-main article p code {
+main article :is(p, li) :is(code, kdb) {
     padding: 1px 4px;
     background-color: var(--base-code-color);
 }
